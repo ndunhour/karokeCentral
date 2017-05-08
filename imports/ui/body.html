@@ -25,4 +25,12 @@
       {{/each}}
     </ul>
   </div>
+  <script>
+    const endpoint = 'https://raw.githubusercontent.com/ndunhourowens/karokeCentral/master/private/karokeList.json';
+
+    const songs = [];
+    fetch(endpoint)
+        .then(blob => blob.json())
+        .then(data => songs.push(...data));
+  </script>
 </body>
