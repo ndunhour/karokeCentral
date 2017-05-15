@@ -1,5 +1,35 @@
 <template name="searchfield">
-    <form class="searchfield">
-        <input type="text" name="text" placeholder="Search by Title or Artist" />
-    </form>
+    <div class="requestBox" style="display:none">Your song has been requested</div>
+
+    <div style="background-color: green;">
+
+    <h2>Request list</h2>
+        {{#each showRequests}}
+            <li>{{selection}}</li>
+        {{/each}}
+
+    </div>
+
+    <div class="searchArea">
+        <form class="searchfield">
+            <input type="text" class="inputField" placeholder="Search by Title or Artist" />
+
+            <table>
+                <tr>
+
+                    <th>Artist</th>
+                    <th>Title</th>
+                    <th>Song ID</th>
+                </tr>
+                {{#each showList}}
+                <tr>
+                    <td>{{Artist}}</td>
+                    <td>{{Title}}</td>
+                    <td>{{ID}}</td>
+                </tr>
+                {{/each}}
+            </table>
+        </form>
+
+    </div>
 </template>

@@ -1,36 +1,24 @@
 <body>
-  <div class="container">
-    <header>
-        <h1>Todo List ({{incompleteCount}})</h1>
+    <div class="container">
+        <header>
+            <h1>Karoke Central</h1>
 
-        <label for="" class="hide-completed">
-            <input type="checkbox" />
-            Hide Completed Tasks
-        </label>
+            {{> loginButtons}}
 
-        {{> loginButtons}}
+            {{> searchfield}}
 
-        {{> searchfield}}
+        </header>
+    </div>
 
-        {{#if currentUser}}
-            <form class="new-task">
-                <input type="text" name="text" placeholder="Type to add new tasks" />
-            </form>
-        {{/if}}
-    </header>
-
-    <ul>
-      {{#each tasks}}
-        {{> task}}
-      {{/each}}
-    </ul>
-  </div>
-  <script>
+    <script>
     const endpoint = 'https://raw.githubusercontent.com/ndunhourowens/karokeCentral/master/private/karokeList.json';
 
     const songs = [];
+
     fetch(endpoint)
         .then(blob => blob.json())
         .then(data => songs.push(...data));
-  </script>
+    </script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
 </body>
