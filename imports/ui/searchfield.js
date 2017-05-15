@@ -61,8 +61,6 @@ Template.searchfield.events({
         };
 
         Meteor.call('requestSong', request, function(err, result){
-            console.log('selection', result);
-
         }) ;
 
     },
