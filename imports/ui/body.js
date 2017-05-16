@@ -7,6 +7,8 @@ import { Requests } from '../api/requests.js';
 
 import './searchfield.js';
 import './body.html';
+import './nav.js';
+import './playList.js';
 
 Template.body.onCreated(function bodyOnCreated() {
     this.state = new ReactiveDict();

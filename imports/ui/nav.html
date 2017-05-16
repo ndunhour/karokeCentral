@@ -1,0 +1,9 @@
+<template name="nav">
+    <div class="navBar">
+        <ul class="nav nav-pills">
+            <li data-template="searchfield" role="presentation" class="active"><a href="#">Search Songs</a></li>
+            <li data-template="playList" role="presentation"><a href="#">Play List</a></li>
+        </ul>
+        {{> Template.dynamic template=tab data=tabData}}
+    </div>
+</template>

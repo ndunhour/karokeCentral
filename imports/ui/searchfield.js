@@ -3,6 +3,7 @@ import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
 
 import './searchfield.html';
+import './searchfield.css';
 
 import { Requests } from '../api/requests.js';
 
