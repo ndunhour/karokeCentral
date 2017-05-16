@@ -5,10 +5,10 @@ import { ReactiveDict } from 'meteor/reactive-dict';
 import './searchfield.html';
 import './searchfield.css';
 
-import { Requests } from '../api/requests.js';
+// import { Requests } from '../api/requests.js';
 
 Template.searchfield.onCreated( function(){
-    Meteor.subscribe('requests');
+    // Meteor.subscribe('requests');
 
 });
 
@@ -19,9 +19,9 @@ Template.searchfield.helpers({
   showList() {
     return Session.get('songList');
   },
-  showRequests() {
-    return Requests.find({});
-  }
+  // showRequests() {
+  //   return Requests.find({});
+  // }
 });
 
 Template.searchfield.events({
@@ -47,15 +47,20 @@ Template.searchfield.events({
         $('.inputField').val('');
     },
     'click tr': function(e){
-        const selection = e.currentTarget.innerText;
+        const artist = e.currentTarget.children[0].outerText;
+        const title = e.currentTarget.children[1].outerText;
+        const songId = e.currentTarget.children[2].outerText;
 
-        $('.requestBox').text(selection + " has been requested for you")
+
+        $('.requestBox').text(title + " has been requested for you")
             .fadeIn(800)
             .delay(1500)
             .fadeOut(500);
 
         const request = {
-            selection,
+            artist,
+            title,
+            songId,
             createdAt: new Date(),
             owner: Meteor.userId(),
             username: Meteor.user().username

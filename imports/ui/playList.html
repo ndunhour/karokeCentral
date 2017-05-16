@@ -1,12 +1,20 @@
 <template name="playList">
-    <h1>In play list</h1>
-    <!--     <div style="background-color: green;">
+    <div class="playList">
+        <table>
+            <tr>
 
-        <h2>Request list</h2>
+                <th>Artist</th>
+                <th>Title</th>
+                <th>Song ID</th>
+            </tr>
             {{#each showRequests}}
-                <li>{{selection}}</li>
+            <tr>
+                <td>{{artist}}</td>
+                <td>{{title}}</td>
+                <td>{{songId}}</td>
+            </tr>
             {{/each}}
-
-    </div> -->
+        </table>
+    </div>
 
 </template>

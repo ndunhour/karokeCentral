@@ -8,12 +8,16 @@ import { Requests } from '../api/requests.js';
 
 
 Template.playList.created = function(){
+    Meteor.subscribe('requests');
 };
 
 Template.playList.rendered = function(){
 };
 
 Template.playList.helpers({
+    showRequests() {
+        return Requests.find({});
+    }
 
 });
 
