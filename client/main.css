@@ -100,6 +100,10 @@ li:hover {
   position: relative;
 }
 
+.signIn{
+    text-align: left;
+}
+
 header .hide-completed {
     float: right;
 }
