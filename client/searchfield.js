@@ -63,7 +63,7 @@ Template.searchfield.events({
             songId,
             createdAt: new Date(),
             owner: Meteor.userId(),
-            username: Meteor.user().username
+            // username: Meteor.user().username
         };
 
         Meteor.call('requestSong', request, function(err, result){

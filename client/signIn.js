@@ -34,10 +34,12 @@ Template.signIn.events({
 
         template.currentTab.set( currentTab.data( "template" ) );
     },
-    'click .toAdmin': function(e){
+    'click #toAdmin': function(e){
         event.preventDefault();
         const username = $('#text').val();
         const password = $('#pwd').val();
+        console.log('click');
+        Router.go('adminDash');
 
 
     }
