@@ -10,9 +10,16 @@ Template.nav.onCreated( function() {
 });
 
 Template.nav.helpers({
-  tab: function() {
-    return Template.instance().currentTab.get();
-  },
+    tab: function() {
+        return Template.instance().currentTab.get();
+    },
+    admin: function(){
+        if(Router.current().route._path ==="/adminDash"){
+            return "block";
+        }else{
+            return "none";
+        }
+    }
 
 });
 

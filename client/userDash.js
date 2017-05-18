@@ -2,17 +2,17 @@ import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
 
-import './searchfield.html';
-import './searchfield.css';
+import './userDash.html';
+import './userDash.css';
 
 // import { Requests } from '../api/requests.js';
 
-Template.searchfield.onCreated( function(){
+Template.userDash.onCreated( function(){
     // Meteor.subscribe('requests');
 
 });
 
-Template.searchfield.helpers({
+Template.userDash.helpers({
   isOwner() {
     return this.owner === Meteor.userId();
   },
@@ -24,7 +24,7 @@ Template.searchfield.helpers({
   // }
 });
 
-Template.searchfield.events({
+Template.userDash.events({
     'submit .searchfield': function(event){
         event.preventDefault();
         const searchValue = event.target[0].value;

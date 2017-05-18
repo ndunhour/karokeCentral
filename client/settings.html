@@ -1,0 +1,16 @@
+<template name="settings">
+    <p id="demo"></p>
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="createSessionId">Create Session Id</button>
+    <div class="row">
+        <div>
+            <ul class="list-group">
+            {{#each showSessionId}}
+                <li class="list-group-item clearfix ">
+                    <span class="pull-left">{{sId}}</span>
+                    <span class="pull-right">{{createdAt}}</span>
+                </li>
+            {{/each}}
+            </ul>
+        </div>
+    </div>
+</template>

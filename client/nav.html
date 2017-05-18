@@ -1,9 +1,18 @@
 <template name="nav">
     <div class="navBar">
-        <ul class="nav nav-pills nav-justified adminLink">
-            <li role="presentation" class="active"><a href="{{pathFor route='searchfield'}}">Search Songs</a></li>
-            <li role="presentation"><a href="{{pathFor route='playList'}}">Play List</a></li>
+        <ul class="nav nav-pills nav-justified">
+            <li class="nav-item">
+                <a href="{{pathFor route='userDash'}}">Search Songs</a>
+            </li>
+            <li class="nav-item">
+                <a href="{{pathFor route='playList'}}">Play List</a>
+            </li>
+            <li class="nav-item" style="display: {{admin}}">
+                <a href="{{pathFor route='settings'}}">Settings</a>
+            </li>
+            <li class="nav-item">
+                <a href="{{pathFor route='signIn'}}">Log Out</a>
+            </li>
         </ul>
-        <!-- {{> Template.dynamic template=tab}} -->
     </div>
 </template>
