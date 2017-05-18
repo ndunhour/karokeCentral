@@ -9,11 +9,11 @@ import { Requests } from '../imports/api/requests.js';
 
 
 Template.settings.onCreated( function(){
+        console.log('in Settings', SessionId.find().count());
 
 
 });
 Template.settings.rendered = function(){
-        // console.log('sessionId', SessionId.find({}, {sort:{"sessionId": -1}}).fetch()[0]);
 
 };
 
@@ -32,9 +32,12 @@ Template.settings.events({
             createdAt: new Date(),
             sId: num
         };
+        const oldSessionId = SessionId.findOne({}, {sort:{'createdAt': -1}})._id;
+
         Meteor.call('createSessionId', sessionId, function(err, result){
-            Session.set('sessionId', SessionId.find({}, {sort:{"createdAt": -1}}).fetch()[0].sId);
-            console.log('session', Session.get('sessionId'));
+            Meteor.call('deleteOldSessionId', oldSessionId, function(err, result){
+                console.log('deleted');
+            });
         });
 
 
