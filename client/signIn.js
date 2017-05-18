@@ -7,6 +7,7 @@ import './signIn.html';
 import { SessionId } from '../imports/api/sessionId.js';
 
 
+
 Template.signIn.created = function(){
     this.currentTab = new ReactiveVar( "adminDash" );
 };
@@ -41,7 +42,6 @@ Template.signIn.events({
     },
     'click .nav-pills li': function( event, template ) {
         var currentTab = $( event.target ).closest( "li" );
-        console.log(currentTab);
         currentTab.addClass( "active" );
         $( ".nav-pills li" ).not( currentTab ).removeClass( "active" );
 
@@ -51,7 +51,14 @@ Template.signIn.events({
         event.preventDefault();
         const username = $('#text').val();
         const password = $('#pwd').val();
-        Router.go('adminDash');
+
+        Meteor.loginWithPassword(username, password, function(err){
+            if(err){
+                console.log(err.reason);
+            } else {
+                Router.go("/adminDash");
+            }
+        });
 
 
     }

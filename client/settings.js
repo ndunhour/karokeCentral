@@ -9,8 +9,6 @@ import { Requests } from '../imports/api/requests.js';
 
 
 Template.settings.onCreated( function(){
-        console.log('in Settings', SessionId.find().count());
-
 
 });
 Template.settings.rendered = function(){
@@ -35,9 +33,7 @@ Template.settings.events({
         const oldSessionId = SessionId.findOne({}, {sort:{'createdAt': -1}})._id;
 
         Meteor.call('createSessionId', sessionId, function(err, result){
-            Meteor.call('deleteOldSessionId', oldSessionId, function(err, result){
-                console.log('deleted');
-            });
+            Meteor.call('deleteOldSessionId', oldSessionId, function(err, result){});
         });
 
 
