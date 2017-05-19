@@ -5,15 +5,11 @@ import { ReactiveDict } from 'meteor/reactive-dict';
 import './userDash.html';
 import './userDash.css';
 
-
 Template.userDash.onCreated( function(){
 
 });
 
 Template.userDash.helpers({
-  isOwner() {
-    return this.owner === Meteor.userId();
-  },
   showList() {
     return Session.get('songList');
   },

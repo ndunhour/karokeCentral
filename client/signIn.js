@@ -16,9 +16,7 @@ Template.signIn.rendered = function(){
 };
 
 Template.signIn.helpers({
-    tab: function() {
-        return Template.instance().currentTab.get();
-    },
+
 });
 
 Template.signIn.events({

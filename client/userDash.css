@@ -45,3 +45,7 @@ th {
 tr:hover {
     background-color: #e6f4f4
 }
+
+.confirm td{
+    text-align: center;
+}

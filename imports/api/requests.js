@@ -21,5 +21,8 @@ Meteor.methods({
             return el.Title.match(regex) || el.Artist.match(regex);
         });
         return filterSearch;
-    }
+    },
+    'deleteSong': function(songId){
+        return Requests.remove({songId: songId});
+    },
 });
