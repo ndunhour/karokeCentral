@@ -1,16 +1,21 @@
 <template name="signIn">
-    <div class="row">
-        <form action="" class="signIn">
-            <div class="col-8"><span class="input-group-addon" id="basic-addon1">HMC</span></div>
-            <div class="col-4" ><input type="text" class="form-control" id="sessionID" placeholder="Session ID" aria-describedby="basic-addon1"></div>
+    <div class="user">
+        <form>
+            <div class="form-group">
+                <input type="text" class="form-control" id="sessionID" placeholder="HMC Session Id">
+            </div>
             <div><p id="errMsg" style="display: none"></p></div>
             <button type="submit" class="btn btn-default" id="toUser">Submit</button>
-
         </form>
     </div>
 
-    <div class="admin">
-        <button type="submit" class="btn btn-default showAdmin">Admin Sign In</button>
+
+
+
+
+    <div class="admin" >
+        <a href="" class="showAdmin">Admin Sign In</a>
+        <!-- <button type="submit" class="btn btn-default showAdmin">Admin Sign In</button> -->
         <form style="display:none" class="adminSignIn">
             <div class="form-group">
                 <label for="text">Username:</label>
@@ -20,8 +25,8 @@
                 <label for="pwd">Password:</label>
                 <input type="password" class="form-control" id="pwd">
             </div>
+            <div><p id="adminErrrMsg" style="display: none"></p></div>
             <button type="submit" class="btn btn-default" id="toAdmin">Submit</button>
-
             <div><a href="/adminReg">Admin Reg</a></div>
         </form>
     </div>

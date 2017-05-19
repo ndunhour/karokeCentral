@@ -54,13 +54,21 @@ Template.signIn.events({
 
         Meteor.loginWithPassword(username, password, function(err){
             if(err){
-                console.log(err.reason);
+
+                $('#adminErrrMsg').show()
+                    .text(err.reason)
+                    .fadeIn(800)
+                    .delay(1500)
+                    .fadeOut(500);
+                $('#text').val('');
+                $('#pwd').val('');
             } else {
                 Router.go("/adminDash");
             }
         });
 
 
-    }
+    },
+
 
 });

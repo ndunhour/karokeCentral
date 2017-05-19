@@ -28,6 +28,11 @@ Template.adminReg.events({
             }, function(error){
                     if(error){
                         console.log(error.reason);
+                        $('#adminRegErrMsg').show()
+                            .text(error.reason)
+                            .fadeIn(800)
+                            .delay(1500)
+                            .fadeOut(500);
                     } else {
                         Router.go('/adminDash');
                     }
@@ -41,6 +46,19 @@ Template.adminReg.events({
             .fadeOut(500);
         }
 
+    },
+    'click #getToAdmin': function(e){
+        event.preventDefault();
+        if ($('#ra').val() === 'admin'){
+            $('.admin').css('display','block');
+            $('.adminPwd').css('display', 'none');
+        }else {
+            $('#raErrMsg').show()
+                .text("Incorrect Password")
+                .fadeIn(800)
+                .delay(1500)
+                .fadeOut(500);
+        }
     }
 
 });
