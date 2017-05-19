@@ -6,38 +6,31 @@ import './nav.html';
 import './nav.css';
 
 Template.nav.onCreated( function() {
-  this.currentTab = new ReactiveVar( "searchfield" );
+
 });
 
+Template.nav.rendered = function(){
+    if(Meteor.users.find().count() === 0){
+        $('#settingLI').hide();
+    }
+};
+
+
 Template.nav.helpers({
-    tab: function() {
-        return Template.instance().currentTab.get();
-    },
-    // admin: function(){
-    //     if(Router.current().route._path ==="/adminDash" || "/settings"){
-    //         return "block";
-    //     }else{
-    //         return "none";
-    //     }
-    // }
+    user: function(){
+        if(Meteor.users.find().count() === 0){
+            return '/userDash';
+        }else{
+            return '/adminDash/' + Meteor.userId();
+        }
+    }
 
 });
 
 Template.nav.events({
-    'click .searchSongs': function(e){
+    'click #logOut': function(e){
         event.preventDefault();
-        console.log('searchSongs');
+        Meteor.logout();
+        Router.go('/');
     },
-    'click .playList': function(e){
-        event.preventDefault();
-        console.log('playList');
-    },
-    'click .nav-pills li': function( event, template ) {
-        var currentTab = $( event.target ).closest( "li" );
-
-        currentTab.addClass( "active" );
-        $( ".nav-pills li" ).not( currentTab ).removeClass( "active" );
-
-        template.currentTab.set( currentTab.data( "template" ) );
-    }
 });

@@ -5,10 +5,8 @@ import { ReactiveDict } from 'meteor/reactive-dict';
 import './userDash.html';
 import './userDash.css';
 
-// import { Requests } from '../api/requests.js';
 
 Template.userDash.onCreated( function(){
-    // Meteor.subscribe('requests');
 
 });
 
@@ -19,9 +17,6 @@ Template.userDash.helpers({
   showList() {
     return Session.get('songList');
   },
-  // showRequests() {
-  //   return Requests.find({});
-  // }
 });
 
 Template.userDash.events({
@@ -43,7 +38,6 @@ Template.userDash.events({
             });
 
         });
-        // set input box to placeholder
         $('.inputField').val('');
     },
     'click tr': function(e){
@@ -63,7 +57,6 @@ Template.userDash.events({
             songId,
             createdAt: new Date(),
             owner: Meteor.userId(),
-            // username: Meteor.user().username
         };
 
         Meteor.call('requestSong', request, function(err, result){

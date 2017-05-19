@@ -20,6 +20,13 @@ if (Meteor.isServer) {
         return SessionId.find({});
     });
 
+    // const currentCreatedAt= SessionId.find({}, {sort:{"createdAt": -1}}).fetch()[0].createdAt;
+    // const now = new Date();
+    // console.log('currentId', SessionId.find({}, {sort:{"createdAt": -1}}).fetch()[0].sId);
+    // if (now > currentCreatedAt) {
+    //     alert("now is greater");
+    // }
+
 }
 
 Meteor.methods({

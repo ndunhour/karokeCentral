@@ -63,7 +63,7 @@ Template.signIn.events({
                 $('#text').val('');
                 $('#pwd').val('');
             } else {
-                Router.go("/adminDash");
+                Router.go("/adminDash/" + Meteor.userId());
             }
         });
 
