@@ -1,17 +1,17 @@
 <template name="settings">
     {{> nav}}
-    <p id="demo"></p>
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="createSessionId">Create Session Id</button>
-    <div class="row">
-        <div>
-            <ul class="list-group">
-            {{#each showSessionId}}
-                <li class="list-group-item clearfix ">
-                    <span class="pull-left">{{sId}}</span>
-                    <span class="pull-right">{{createdAt}}</span>
-                </li>
-            {{/each}}
-            </ul>
-        </div>
+    <div id="createBtn"><button type="button" class="btn btn-primary btn-sm"  id="createSessionId">Create Session Id</button></div>
+    <div>
+        <ul class="list-group">
+        {{#each showSessionId}}
+            <li class="list-group-item clearfix ">
+                <span class="pull-left">{{sId}}</span>
+                <span class="pull-right">{{createdAt}}</span>
+            </li>
+        {{/each}}
+        </ul>
     </div>
+
+    <!-- save to add new bars
+     <div id="createBarBtn"><button type="button" class="btn btn-primary btn-sm"  id="createBar">Create Bar</button></div> -->
 </template>

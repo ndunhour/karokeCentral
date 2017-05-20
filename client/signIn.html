@@ -1,21 +1,20 @@
 <template name="signIn">
     <div class="user">
-        <form>
-            <div class="form-group">
-                <input type="text" class="form-control" id="sessionID" placeholder="HMC Session Id">
-            </div>
-            <div><p id="errMsg" style="display: none"></p></div>
-            <button type="submit" class="btn btn-default" id="toUser">Submit</button>
-        </form>
+        <table>
+            {{#each bars}}
+            <tr id={{_id}}>
+                <td><input type="text" class="form-control sessionID" placeholder="{{barName}} Session Id"></td>
+                <td><p id="errMsg" style="display: none"></p></td>
+                <td><button type="button" class="btn btn-primary btn-sm" id="toUser">Submit</button></td>
+            </tr>
+            {{/each}}
+        </table>
     </div>
-
-
-
 
 
     <div class="admin" >
         <a href="" class="showAdmin">Admin Sign In</a>
-        <!-- <button type="submit" class="btn btn-default showAdmin">Admin Sign In</button> -->
+        <!-- <button type="button" class="btn btn-primary btn-sm showAdmin">Admin Sign In</button> -->
         <form style="display:none" class="adminSignIn">
             <div class="form-group">
                 <label for="text">Username:</label>
@@ -26,7 +25,7 @@
                 <input type="password" class="form-control" id="pwd">
             </div>
             <div><p id="adminErrrMsg" style="display: none"></p></div>
-            <button type="submit" class="btn btn-default" id="toAdmin">Submit</button>
+            <button type="button" class="btn btn-primary btn-sm" id="toAdmin">Submit</button>
             <div><a href="/adminReg">Admin Reg</a></div>
         </form>
     </div>

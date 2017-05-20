@@ -1,16 +1,14 @@
 <template name="userDash">
-    <div class="requestBox" style="display:none">Your song has been requested</div>
     {{> nav}}
+    <div class="requestBox" style="display:none">Your song has been requested</div>
     <div class="searchArea">
         <form class="searchfield">
-            <input type="text" class="inputField" placeholder="Search by Title or Artist" />
-
+            <input type="text" class="form-control inputField" placeholder="Search by Title or Artist" />
         </form>
     </div>
     <div class="results">
         <table>
             <tr>
-
                 <th>Artist</th>
                 <th>Title</th>
                 <th>Song ID</th>

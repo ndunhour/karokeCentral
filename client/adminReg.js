@@ -34,7 +34,7 @@ Template.adminReg.events({
                             .delay(1500)
                             .fadeOut(500);
                     } else {
-                        Router.go('/adminDash');
+                        Router.go('/adminDash/' + Meteor.userId());
                     }
                 });
 

@@ -3,7 +3,6 @@ import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
 
 import './userDash.html';
-import './userDash.css';
 
 Template.userDash.onCreated( function(){
 

@@ -5,8 +5,7 @@ import { ReactiveDict } from 'meteor/reactive-dict';
 import './signIn.html';
 
 import { SessionId } from '../imports/api/sessionId.js';
-
-
+import { Bars } from '../imports/api/bars.js';
 
 Template.signIn.created = function(){
     this.currentTab = new ReactiveVar( "adminDash" );
@@ -16,13 +15,15 @@ Template.signIn.rendered = function(){
 };
 
 Template.signIn.helpers({
-
+    bars:  function(){
+        return Bars.find({});
+    }
 });
 
 Template.signIn.events({
     'click #toUser': function(e){
         event.preventDefault();
-        const session = $('#sessionID').val().toString();
+        const session = $('.sessionID').val().toString();
         const currentSID = SessionId.find({}, {sort:{"createdAt": -1}}).fetch()[0].sId.toString();
         if( session === currentSID){
             Router.go('userDash');
@@ -32,6 +33,7 @@ Template.signIn.events({
             .fadeIn(800)
             .delay(1500)
             .fadeOut(500);
+            $('.sessionID').val('');
         }
     },
     'click .showAdmin': function(e){

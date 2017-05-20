@@ -16,9 +16,10 @@ if (Meteor.isServer) {
 
         SessionId.insert(startUpSessionId);
     }
-    Meteor.publish('sessionId', function sessionIdPublication() {
+    Meteor.publish('sessionId', function() {
         return SessionId.find({});
     });
+
 
     // const currentCreatedAt= SessionId.find({}, {sort:{"createdAt": -1}}).fetch()[0].createdAt;
     // const now = new Date();

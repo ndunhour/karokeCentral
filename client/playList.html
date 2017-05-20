@@ -3,9 +3,9 @@
     <div class="confirm" style="display:none">
         <table>
             <tr>
-                <td><button type="button" class="btn btn-primary btn-sm js-cancel">Cancel</button></td>
+                <td><button type="button" class="btn btn-primary btn-sm cancelBtn">Cancel</button></td>
                 <td><p>Are you sure?</p></td>
-                <td><button type="button" class="btn btn-primary btn-sm js-deleteSong">Yes</button></td>
+                <td><button type="button" class="btn btn-primary btn-sm deleteSongBtn">Yes</button></td>
             </tr>
 
         </table>
@@ -24,7 +24,7 @@
                 <td>{{artist}}</td>
                 <td>{{title}}</td>
                 <td>{{songId}}</td>
-                <td id="deleteBth" style="display:{{work}}"><button type="button" class="btn btn-primary btn-sm js-confirm" id="{{_id}}">Delete Song</button></td>
+                <td id="deleteBtn" style="display:{{work}}"><button type="button" class="btn btn-primary btn-sm confirmBtn" id="{{_id}}">Delete Song</button></td>
             </tr>
             {{/each}}
         </table>
