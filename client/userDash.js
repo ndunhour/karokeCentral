@@ -8,6 +8,10 @@ Template.userDash.onCreated( function(){
 
 });
 
+Template.userDash.rendered = function(){
+
+};
+
 Template.userDash.helpers({
   showList() {
     return Session.get('songList');

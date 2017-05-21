@@ -12,6 +12,21 @@ Template.nav.rendered = function(){
     if(Meteor.users.find().count() === 0){
         $('#settingLI').hide();
     }
+
+    var something = window.document.getElementById('something');
+
+    // create a simple instance
+    // by default, it only adds horizontal recognizers
+    var mc = new Hammer(something);
+
+    // listen to events...
+    mc.on("panright", function(ev) {
+    Router.go('/playList');
+    });
+
+    mc.on("panleft", function(ev) {
+    Router.go('/userDash');
+    });
 };
 
 
