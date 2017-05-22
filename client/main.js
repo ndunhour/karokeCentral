@@ -12,6 +12,10 @@ Template.main.helpers({
 });
 
 Template.main.events({
-
+    'click .logoutBtn': function(e){
+        e.preventDefault();
+        Meteor.logout();
+        Router.go('/');
+    }
 });
 
