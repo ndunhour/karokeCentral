@@ -29,25 +29,31 @@ Template.nav.rendered = function(){
     // Router.go('/userDash');
     // });
 
-    if(Router.current().route._path === '/userDash' || '/adminDash/'){
-        mc.on("panright", function(ev) {
+
+    if(Router.current().route._path === '/userDash' || '/adminDash/' + Meteor.userId()){
+        mc.on("panright drag", function(ev) {
             Router.go('/playList');
         });
+
+        if(Meteor.users.find().count() > 0){
+            mc.on("panleft drag", function(ev) {
+                Router.go('/settings');
+            });
+        }
     }
 
     if(Router.current().route._path === '/playList'){
         if(Meteor.users.find().count() === 0){
             mc.on("panright drag", function(ev) {
                 Meteor.logout();
-                Router.go('/');
+                Router.go('/userDash');
 
             });
             mc.on("panleft drag", function(ev) {
-                Router.go('/userDash');
+                Router.go('/playList');
             });
 
         }else{
-        console.log('here');
             mc.on("panright drag", function(ev) {
                 Router.go('/settings');
 
@@ -60,16 +66,14 @@ Template.nav.rendered = function(){
     }
 
     if(Router.current().route._path === '/settings'){
-        if(Meteor.users.find().count() > 0){
-
+        // if(Meteor.users.find().count() > 0){
             mc.on("panright", function(ev) {
-                Meteor.logout();
-                Router.go('/');
+                Router.go('/adminDash/' + Meteor.userId());
             });
             mc.on("panleft", function(ev) {
                 Router.go('/playList');
             });
-        }
+        // }
     }
 };
 
