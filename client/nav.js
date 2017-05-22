@@ -20,13 +20,57 @@ Template.nav.rendered = function(){
     var mc = new Hammer(something);
 
     // listen to events...
-    mc.on("panright", function(ev) {
-    Router.go('/playList');
-    });
+    // mc.on("panright", function(ev) {
+    // console.log(Router.current().route._path);
+    // Router.go('/playList');
+    // });
 
-    mc.on("panleft", function(ev) {
-    Router.go('/userDash');
-    });
+    // mc.on("panleft", function(ev) {
+    // Router.go('/userDash');
+    // });
+
+    if(Router.current().route._path === '/userDash' || '/adminDash/'){
+        mc.on("panright", function(ev) {
+            Router.go('/playList');
+        });
+    }
+
+    if(Router.current().route._path === '/playList'){
+        if(Meteor.users.find().count() === 0){
+            mc.on("panright drag", function(ev) {
+                Meteor.logout();
+                Router.go('/');
+
+            });
+            mc.on("panleft drag", function(ev) {
+                Router.go('/userDash');
+            });
+
+        }else{
+        console.log('here');
+            mc.on("panright drag", function(ev) {
+                Router.go('/settings');
+
+            });
+            mc.on("panleft drag", function(ev) {
+                Router.go('/adminDash/' + Meteor.userId());
+            });
+        }
+
+    }
+
+    if(Router.current().route._path === '/settings'){
+        if(Meteor.users.find().count() > 0){
+
+            mc.on("panright", function(ev) {
+                Meteor.logout();
+                Router.go('/');
+            });
+            mc.on("panleft", function(ev) {
+                Router.go('/playList');
+            });
+        }
+    }
 };
 
 
@@ -48,3 +92,5 @@ Template.nav.events({
         Router.go('/');
     },
 });
+
+
