@@ -53,17 +53,6 @@ header {
     text-align: center;
     padding-bottom: 10px;
 }
-/*button:hover{
-    background-color: #e6f4f4;
-}*/
-/*button#createSessionId.btn.btn-primary.btn-sm{
-    background-color: #fe9593;
-    color: #1f68bf;
-    border: #fe9593 !important;
-    text-shadow: #000 1px 1px;
-    outline: none;
-    transform: translateY(4px);
-}*/
 
 button#createSessionId.btn.btn-primary.btn-sm{
     text-align: center;
@@ -78,6 +67,38 @@ button#createSessionId.btn.btn-primary.btn-sm:hover {background-color: #fe9593}
 
 button#createSessionId.btn.btn-primary.btn-sm:active {
   background-color: #fe9593;
+  transform: translateY(4px);
+}
+/***************************************/
+button.btn.btn-primary.yesLogout{
+    outline: none;
+    width: 100%;
+    text-shadow: #000 1px 1px;
+    color: #58cee3;
+    background-color: #d43256;
+    border: none;
+}
+
+button.btn.btn-primary.yesLogout:hover {background-color: #d43256}
+
+button.btn.btn-primary.yesLogout:active {
+  background-color: #d43256;
+  transform: translateY(4px);
+}
+/***************************************/
+button.btn.btn-primary.cancelLogout{
+    outline: none;
+    width: 100%;
+    text-shadow: #000 1px 1px;
+    color: #58cee3;
+    background-color: #d43256;
+    border: none;
+}
+
+button.btn.btn-primary.cancelLogout:hover {background-color: #d43256}
+
+button.btn.btn-primary.cancelLogout:active {
+  background-color: #d43256;
   transform: translateY(4px);
 }
 #sessionIdBox{
@@ -118,29 +139,26 @@ li:hover {
   border: none;
   position: relative;
 }
-
 .signIn{
     text-align: left;
 }
-
+.logOutDiv{
+    margin-top: 5px;
+}
+.ruSure{
+    text-align: center;
+}
 
 
 /***********************************/
-/*@media (max-width: 600px) {
-  li {
-    padding: 12px 15px;
-  }
-
-  .search {
-    width: 150px;
-    clear: both;
-  }
-
-  .searchfield input {
-    padding-bottom: 5px;
-  }
+[class*="col-"] {
+    width: 100%;
 }
-*/
+@media only screen and (max-width: 600px) and (min-width: 440px){
+    .col-m-4 {width: 33.33%;}
+
+}
+
 /************* SAVING FOR COPY **********************/
 
 
