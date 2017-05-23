@@ -31,6 +31,9 @@ header {
 .navBar{
     margin-bottom: 3px;
 }
+.playList{
+    margin-top: 10px;
+}
 .pull-left{
     text-align: left;
 }

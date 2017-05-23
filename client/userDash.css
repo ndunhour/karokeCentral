@@ -1,15 +1,14 @@
 .inputField {
     text-align: center;
     box-sizing: border-box;
-    padding: 10px 10px;
     background: transparent;
     width: 100%;
     font-size: 1em;
-    margin-bottom: 10px 0;
-    border: 1px solid #1f68bf;
+    border: 1px solid #1f68bf !important;
     color: #000 !important;
     box-shadow: none !important;
 }
+
 .requestBox{
     display: block;
     background-color: #fe9593 !important;
@@ -51,11 +50,8 @@ th, td {
     text-align: justify;
     border-bottom: 1px solid #ddd;
 }
-/*th {
-    background-color: #cccece;
-}*/
 tr:hover {
-    background-color: #d2e0f2
+    background-color: #e5e5e5;
 }
 tr:active {
   transform: translateY(4px);
@@ -65,6 +61,12 @@ table#searchTable.table > tr#searchTH{
     color: #fe9593 !important;
     text-shadow: #000 1px 1px;
 }
+table#deleteSong > tr#playListTH >th{
+    background-color: #58cee3 !important;
+    color: #d43256 !important;
+    text-shadow: #000 1px 1px;
+}
+
 
 
 
