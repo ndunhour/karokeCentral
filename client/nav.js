@@ -17,10 +17,10 @@ Template.nav.rendered = function(){
     Session.set('userSession', split);
     Meteor.subscribe('createSessionUser');
 
-    if(Meteor.users.find().count() > 0){
-            return $('#settingLI').css("display", "block");
+    if(Meteor.users.findOne({_id:Session.get('userSession')})){
+            return $('.settingsTab').css("display", "block");
         }else{
-            return $('#settingLI').css("display", "none");
+            return $('.settingsTab').css("display", "none");
     }
 
 
@@ -35,8 +35,15 @@ Template.nav.helpers({
             return '/adminDash/' + Meteor.userId();
         }
     },
-    sessId: function(){
-        return Session.get('userSession');
+    playList: function(){
+        if(Meteor.users.find().count() === 0){
+            return Session.get('userSession');
+        }else{
+            return Meteor.userId();
+        }
+    },
+    session: function(){
+        return Meteor.userId();
     }
 });
 
