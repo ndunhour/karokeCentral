@@ -34,6 +34,9 @@ header {
 .playList{
     margin-top: 10px;
 }
+.sessionId{
+    margin-top: 10px;
+}
 .pull-left{
     text-align: left;
 }
@@ -50,8 +53,35 @@ header {
     text-align: center;
     padding-bottom: 10px;
 }
-button:hover{
+/*button:hover{
     background-color: #e6f4f4;
+}*/
+/*button#createSessionId.btn.btn-primary.btn-sm{
+    background-color: #fe9593;
+    color: #1f68bf;
+    border: #fe9593 !important;
+    text-shadow: #000 1px 1px;
+    outline: none;
+    transform: translateY(4px);
+}*/
+
+button#createSessionId.btn.btn-primary.btn-sm{
+    text-align: center;
+    outline: none;
+    text-shadow: #000 1px 1px;
+    color: #1f68bf;
+    background-color: #fe9593;
+    border: none;
+}
+
+button#createSessionId.btn.btn-primary.btn-sm:hover {background-color: #fe9593}
+
+button#createSessionId.btn.btn-primary.btn-sm:active {
+  background-color: #fe9593;
+  transform: translateY(4px);
+}
+#sessionIdBox{
+    border:1px solid #fe9593 !important;
 }
 
 h1 {

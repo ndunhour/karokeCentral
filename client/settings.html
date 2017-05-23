@@ -1,8 +1,7 @@
 <template name="settings">
     {{> nav}}
-    <div id="createBtn"><button type="button" class="btn btn-primary btn-sm"  id="createSessionId">Create Session Id</button></div>
-    <div>
-        <ul class="list-group">
+    <div class="sessionId">
+        <ul class="list-group" id="sessionIdBox">
         {{#each showSessionId}}
             <li class="list-group-item clearfix ">
                 <span class="pull-left">{{sId}}</span>
@@ -11,6 +10,7 @@
         {{/each}}
         </ul>
     </div>
+    <div id="createBtn"><button type="button" class="btn btn-primary btn-sm"  id="createSessionId">Create Session Id</button></div>
 
     <!-- save to add new bars
      <div id="createBarBtn"><button type="button" class="btn btn-primary btn-sm"  id="createBar">Create Bar</button></div> -->
