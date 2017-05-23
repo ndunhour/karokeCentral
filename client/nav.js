@@ -74,8 +74,7 @@ Template.nav.helpers({
         }else{
             return '/adminDash/' + Meteor.userId();
         }
-    }
-
+    },
 });
 
 Template.nav.events({

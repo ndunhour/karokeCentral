@@ -1,18 +1,22 @@
 <template name="nav">
-    <div class="navBar">
-        <ul class="nav nav-pills nav-justified">
-            <li class="nav-item">
-                <a href="{{user}}">Search Songs</a>
-            </li>
-            <li class="nav-item">
-                <a href="{{pathFor route='playList'}}">Play List</a>
-            </li>
-            <li class="nav-item" id="settingLI">
-                <a href="{{pathFor route='settings'}}">Settings</a>
-            </li>
-            <li class="nav-item confirmLogout" id="settingLI">
-                <a href="#">Logout</a>
-            </li>
-        </ul>
-    </div>
+
+        <div>
+            <h1 id="header">HMC</h1>
+        </div>
+        <div class="navBar">
+            <ul class="nav nav-pills nav-justified">
+                <li class="nav-item">
+                    <a href="{{user}}">Search Songs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{pathFor route='playList'}}">Play List</a>
+                </li>
+                <li class="nav-item" id="settingLI">
+                    <a href="{{pathFor route='settings'}}">Settings</a>
+                </li>
+                <li class="nav-item confirmLogout" id="settingLI">
+                    <a href="#">Logout</a>
+                </li>
+            </ul>
+        </div>
 </template>

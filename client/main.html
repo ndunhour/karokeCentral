@@ -5,14 +5,14 @@
         <script src="http://hammerjs.github.io/dist/hammer-time.min.js"></script>
 </head>
 <template name="main">
-    <body>
+    <body id="main">
         <div class="container">
-            <header>
-                    <h1>Karoke Central</h1>
+            <header id="header">
+                    <h1 >Karoke Central</h1>
             </header>
-            <div  id="something">
                 {{> yield}}
-            </div>
+            <!-- <div  id="something"> -->
+            <!-- </div> -->
         </div>
 
         <script>

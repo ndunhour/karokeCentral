@@ -1,19 +1,16 @@
 /* CSS declarations go here */
-body {
+body #main{
   font-family: sans-serif;
-  background-color: #315481;
-  background-image: linear-gradient(to bottom, #315481, #918e82 100%);
+  background-color: yellow;
+  /*background-image: linear-gradient(to bottom, #011efe, #918e82 100%);*/
   background-attachment: fixed;
-
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-
   padding: 0;
   margin: 0;
-
   font-size: 14px;
 }
 
@@ -26,7 +23,7 @@ body {
 
 header {
   background: #d2edf4;
-  background-image: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%);
+  background-image: linear-gradient(to bottom, #d0edf5, #00ff00 100%);
   padding: 20px 15px 15px 15px;
   position: relative;
 }
@@ -138,7 +135,7 @@ tr:hover {
 }
 
 /***********************************/
-@media (max-width: 600px) {
+/*@media (max-width: 600px) {
   li {
     padding: 12px 15px;
   }
@@ -152,7 +149,7 @@ tr:hover {
     padding-bottom: 5px;
   }
 }
-
+*/
 /************* SAVING FOR COPY **********************/
 
 

@@ -3,12 +3,16 @@ import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
 
 import './userDash.html';
+// import './userDash.css';
 
 Template.userDash.onCreated( function(){
 
 });
 
 Template.userDash.rendered = function(){
+    var barName = window.document.getElementById('header');
+    $(barName).val('HMC');
+
     if(Meteor.users.find().count() === 0){
         $('#settingLI').hide();
     }

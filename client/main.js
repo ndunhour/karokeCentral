@@ -1,4 +1,5 @@
 import '../imports/startup/accounts-config.js';
+// import './main.css';
 
 Template.main.created = function(){
 };
