@@ -8,14 +8,13 @@ import './nav.css';
 import { CreateSessionUser } from '../imports/api/createSessionUser.js';
 
 Template.nav.onCreated( function() {
-
+    Meteor.subscribe('createSessionUser');
 });
 
 Template.nav.rendered = function(){
     const split = window.location.pathname.split('/').slice(2)[0];
 
     Session.set('userSession', split);
-    Meteor.subscribe('createSessionUser');
 
     if(Meteor.users.findOne({_id:Session.get('userSession')})){
             return $('.settingsTab').css("display", "block");
@@ -32,19 +31,21 @@ Template.nav.helpers({
         if(Meteor.users.find().count() === 0){
             return '/userDash/' + Session.get('userSession');
         }else{
-            return '/adminDash/' + Meteor.userId();
+            return '/adminDash/' + Session.get('userSession');
         }
     },
     playList: function(){
         if(Meteor.users.find().count() === 0){
             return Session.get('userSession');
         }else{
-            return Meteor.userId();
+            return Session.get('userSession');
         }
     },
-    session: function(){
-        return Meteor.userId();
-    }
+    settings: function(){
+
+            return Session.get('userSession');
+
+    },
 });
 
 Template.nav.events({
