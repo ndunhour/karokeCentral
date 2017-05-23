@@ -105,8 +105,8 @@ Template.userDash.events({
 
         $('.requestBox').text(title + " has been requested for you")
             .fadeIn(800)
-            // .delay(1500)
-            // .fadeOut(500);
+            .delay(1500)
+            .fadeOut(500);
 
         const request = {
             artist,

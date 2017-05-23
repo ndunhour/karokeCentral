@@ -28,7 +28,15 @@ header {
   position: relative;
   margin-bottom: 3px;
 }
-
+.navBar{
+    margin-bottom: 3px;
+}
+.pull-left{
+    text-align: left;
+}
+.pull-right{
+    text-align: right;
+}
 
 /************ BUTTONS ***********************/
 
