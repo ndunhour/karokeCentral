@@ -1,0 +1,63 @@
+li.nav-item.searchTab{
+    background-color: #1f68bf !important;
+}
+li.nav-item.searchTab a{
+    color: #fe9593 !important;
+    text-shadow: #000 1px 1px;
+}
+li.nav-item.searchTab a:hover{
+    background-color: #1f68bf !important;
+}
+
+li.nav-item.searchTab a:active {
+  background-color: #1f68bf;
+  transform: translateY(4px);
+}
+
+/*********** Customize PlayList ***********/
+li.nav-item.playListTab{
+    background-color: #58cee3 !important;
+}
+li.nav-item.playListTab a{
+    color: #d43256 !important;
+    text-shadow: #000 1px 1px;
+}
+li.nav-item.playListTab a:hover{
+    background-color: #58cee3 !important;
+}
+li.nav-item.playListTab a:active {
+  background-color: #58cee3;
+  transform: translateY(4px);
+}
+/*********** Customize Settings ***********/
+li.nav-item.settingsTab{
+    background-color: #fe9593 !important;
+}
+li.nav-item.settingsTab a{
+    color: #1f68bf !important;
+    text-shadow: #000 1px 1px;
+
+}
+li.nav-item.settingsTab a:hover{
+    background-color: #fe9593 !important;
+}
+li.nav-item.settingsTab a:active{
+    background-color: #fe9593 !important;
+    transform: translateY(4px);
+}
+/*********** Customize Logout ***********/
+li.nav-item.logoutTab{
+    background-color: #d43256 !important;
+}
+li.nav-item.logoutTab a{
+    color: #58cee3 !important;
+    text-shadow: #000 1px 1px;
+
+}
+li.nav-item.logoutTab a:hover{
+    background-color: #d43256 !important;
+}
+li.nav-item.logoutTab a:active{
+    background-color: #d43256 !important;
+    transform: translateY(4px);
+}

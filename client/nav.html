@@ -1,20 +1,16 @@
 <template name="nav">
-
-        <div>
-            <h1 id="header">HMC</h1>
-        </div>
         <div class="navBar">
             <ul class="nav nav-pills nav-justified">
-                <li class="nav-item">
+                <li class="nav-item searchTab">
                     <a href="{{user}}">Search Songs</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item playListTab">
                     <a href="{{pathFor route='playList'}}">Play List</a>
                 </li>
-                <li class="nav-item" id="settingLI">
+                <li class="nav-item settingsTab" id="settingLI">
                     <a href="{{pathFor route='settings'}}">Settings</a>
                 </li>
-                <li class="nav-item confirmLogout" id="settingLI">
+                <li class="nav-item confirmLogout logoutTab">
                     <a href="#">Logout</a>
                 </li>
             </ul>

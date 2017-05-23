@@ -3,7 +3,7 @@ import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
 
 import './userDash.html';
-// import './userDash.css';
+import './userDash.css';
 
 Template.userDash.onCreated( function(){
 
@@ -105,8 +105,8 @@ Template.userDash.events({
 
         $('.requestBox').text(title + " has been requested for you")
             .fadeIn(800)
-            .delay(1500)
-            .fadeOut(500);
+            // .delay(1500)
+            // .fadeOut(500);
 
         const request = {
             artist,
