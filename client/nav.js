@@ -9,9 +9,11 @@ import { CreateSessionUser } from '../imports/api/createSessionUser.js';
 
 Template.nav.onCreated( function() {
     Meteor.subscribe('createSessionUser');
+
 });
 
 Template.nav.rendered = function(){
+
     const split = window.location.pathname.split('/').slice(2)[0];
 
     Session.set('userSession', split);

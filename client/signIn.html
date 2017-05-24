@@ -11,6 +11,7 @@
         </table>
     </div>
  -->
+    {{> header}}
     <div class="container-fluid user" style="display: block">
         <div class="row">
             {{#each bars}}
@@ -48,4 +49,10 @@
                 <div><a href="/adminReg">Admin Reg</a></div>
             </form>
         </div>
+</template>
+
+<template name="header">
+    <header id="header" style="display:block">
+        <h1 >Karoke Central</h1>
+    </header>
 </template>

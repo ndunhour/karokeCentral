@@ -6,16 +6,10 @@ import './userDash.html';
 import './userDash.css';
 
 Template.userDash.onCreated( function(){
-
+    $('.inputField').focus();
 });
 
 Template.userDash.rendered = function(){
-    var barName = window.document.getElementById('header');
-    $(barName).val('HMC');
-
-    if(Meteor.users.find().count() === 0){
-        $('#settingLI').hide();
-    }
 
 };
 
@@ -46,11 +40,12 @@ Template.userDash.events({
         });
         $('.inputField').val('');
     },
-    'click tr': function(e){
-        const artist = e.currentTarget.children[0].outerText;
-        const title = e.currentTarget.children[1].outerText;
-        const songId = e.currentTarget.children[2].outerText;
+    'click #row': function(e){
+        const artist = e.currentTarget.children[0].children.artist.textContent;
+        const title = e.currentTarget.children[0].children.title.textContent;
+        const songId = e.currentTarget.parentElement.id;
 
+        const owner = window.location.pathname.split('/').slice(2)[0];
 
         $('.requestBox').text(title + " has been requested for you")
             .fadeIn(800)
@@ -62,7 +57,7 @@ Template.userDash.events({
             title,
             songId,
             createdAt: new Date(),
-            owner: Meteor.userId(),
+            owner: owner,
         };
 
         Meteor.call('requestSong', request, function(err, result){

@@ -152,7 +152,7 @@ li:hover {
 /***********************************/
 @media only screen and (max-width: 500px) and (min-width: 300px){
 [class*="col-"] {
-    width: 95%;
+    width: 100%;
 }
 /*.col-xs-12{
     width: 100%;
@@ -165,9 +165,6 @@ li:hover {
     .col-xs-2 {
         padding-left: 0 !important;
         padding-right: 0 !important;
-    }
-    input.form-control.sessionID{
-        background-color: aqua !important;
     }
 
 }

@@ -4,13 +4,13 @@ import { ReactiveDict } from 'meteor/reactive-dict';
 
 import './signIn.html';
 
+
 import { SessionId } from '../imports/api/sessionId.js';
 import { Bars } from '../imports/api/bars.js';
 import { CreateSessionUser } from '../imports/api/createSessionUser.js';
 
 
 Template.signIn.created = function(){
-    this.currentTab = new ReactiveVar( "adminDash" );
 };
 
 Template.signIn.rendered = function(){

@@ -20,29 +20,68 @@
     text-align: center;
 
 }
-/*.confirm td{
-    text-align: center;
-}
-*/
 
-/*table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
+/***********************************/
+#searchHeader{
+    font-weight: bold;
+    font-size: 1em;
+    background-color: #1f68bf;
+    padding: 3px 3px !important;
+    color: white;
+    margin-top: 10px !important;
+}
+p#song{
+    margin-bottom: 0 !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+p#songId{
+    margin-bottom: 0  !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+
 }
 
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
+/**************************************/
+#resultsTable{
+
+}
+#row{
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    border-bottom: 1px solid #1f68bf;
+}
+.artistTab{
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+#artist{
+    font-weight: bold;
+    font-size: 1em;
+    margin-bottom: 0 !important;
+}
+#title{
+    margin-bottom: 0 !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+.idTab{
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+#id{
+    margin-bottom: 0 !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    text-align: right !important;
 }
 
-tr:nth-child(even) {
-    background-color: #dddddd;
-}*/
+
+/************************************/
 table {
     border-collapse: collapse;
     width: 100%;
+
 }
 
 th, td {
