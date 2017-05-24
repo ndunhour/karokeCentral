@@ -1,0 +1,19 @@
+div.container-fluid.admin > div.row{
+    margin-bottom: 10px !important;
+    text-align: center;
+}
+div.container-fluid.admin > div.row > div.col-xs-6 > button{
+    background-color: #58cee3;
+    width: 100%;
+    color: #d43256;
+    border: none !important;
+    box-shadow: 3px 3px #fe9593!important;
+}
+div.container-fluid.admin > div.row > div.col-xs-6 > button:focus{
+    border: none !important;
+    outline: none !important;
+}
+div.container-fluid.admin > div.row > div.col-xs-6 > button:active{
+    box-shadow: 1px 1px #d43256!important;
+    transform: translateY(4px);
+}

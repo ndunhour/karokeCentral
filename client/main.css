@@ -148,6 +148,9 @@ li:hover {
 .ruSure{
     text-align: center;
 }
+.admin{
+    text-align: center;
+}
 
 /***********************************/
 @media only screen and (max-width: 500px) and (min-width: 300px){

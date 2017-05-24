@@ -48,7 +48,7 @@ Template.signIn.events({
     },
     'click .showAdmin': function(e){
         event.preventDefault();
-        $('user').fadeOut(400);
+        $('.user').fadeOut(400);
         $('.showAdmin').fadeOut(400);
         $('.adminSignIn').fadeIn(800);
     },
