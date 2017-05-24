@@ -59,6 +59,10 @@ Template.adminReg.events({
                 .delay(1500)
                 .fadeOut(500);
         }
+    },
+    'click #adminCancel': function(e){
+        e.preventDefault();
+        Router.go('/');
     }
 
 });

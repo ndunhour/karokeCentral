@@ -48,6 +48,8 @@ Template.signIn.events({
     },
     'click .showAdmin': function(e){
         event.preventDefault();
+        $('user').fadeOut(400);
+        $('.showAdmin').fadeOut(400);
         $('.adminSignIn').fadeIn(800);
     },
     'click .nav-pills li': function( event, template ) {
