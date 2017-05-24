@@ -17,9 +17,9 @@ Template.nav.rendered = function(){
     Session.set('userSession', split);
 
     if(Meteor.users.findOne({_id:Session.get('userSession')})){
-            return $('.settingsTab').css("display", "block");
+            return $('.adminNav').css("display", "block");
         }else{
-            return $('.settingsTab').css("display", "none");
+            return $('.userNav').css("display", "block");
     }
 
 
