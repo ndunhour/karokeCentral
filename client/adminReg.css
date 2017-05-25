@@ -17,3 +17,59 @@ div.container-fluid.admin > div.row > div.col-xs-6 > button:active{
     box-shadow: 1px 1px #d43256!important;
     transform: translateY(4px);
 }
+button.toAdmin.btn.btn-primary.btn.sm{
+    background-color: #fe9593;
+    outline: none;
+    text-shadow: #000 1px 1px;
+    color: #1f68bf;
+    border: none;
+}
+button.toAdmin.btn.btn-primary.btn.sm:hover{
+    background-color: #fe9593;
+}
+button.toAdmin.btn.btn-primary.btn.sm:active{
+    background-color: #fe9593;
+    transform: translateY(4px);
+}
+form.adminSignIn hr{
+    margin-bottom: 10px !important;
+    margin-top: 10px !important;
+    border-top: 1px solid #1f68bf;
+}
+#toReg{
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+
+
+
+/* *********** SIGN IN CSS ****************/
+#signInAdmin{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border: 1px solid #fe9593;
+    background-color: #fe9593;
+}
+#signInAdmin a{
+    color: white;
+    text-shadow: #555;
+}
+div.admin hr{
+    margin-bottom: 10px !important;
+    margin-top: 10px !important;
+    border-top: 1px solid #fe9593;
+}
+div.container-fluid.user div.row div.col-md-12 div.col-xs-10{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+div.container-fluid.user div.row div.col-md-12 div.col-xs-2{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+div.container-fluid.user div.row div.col-md-12 div.col-xs-2 button{
+    background-color: #fe9593;
+    border-color: #fe9593;
+    width: 100%;
+}

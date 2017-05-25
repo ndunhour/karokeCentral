@@ -3,6 +3,7 @@ import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
 
 import './signIn.html';
+import './admin.html';
 
 
 import { SessionId } from '../imports/api/sessionId.js';
@@ -46,11 +47,14 @@ Template.signIn.events({
             $('.sessionID').val('');
         }
     },
-    'click .showAdmin': function(e){
-        event.preventDefault();
-        $('.user').fadeOut(400);
-        $('.showAdmin').fadeOut(400);
-        $('.adminSignIn').fadeIn(800);
+    // 'click .showAdmin': function(e){
+    //     event.preventDefault();
+    //     $('.user').fadeOut(400);
+    //     $('.showAdmin').fadeOut(400);
+    //     $('.adminSignIn').fadeIn(800);
+    // },
+    'click #signInAdmin': function(e){
+        Router.go('/adminReg');
     },
     'click .nav-pills li': function( event, template ) {
         var currentTab = $( event.target ).closest( "li" );

@@ -1,18 +1,7 @@
 <template name="signIn">
-<!--     <div class="user" style="display: block">
-        <table >
-            {{#each bars}}
-            <tr id={{_id}}>
-                <td><input type="text" class="form-control sessionID" placeholder="{{barName}} Session Id"></td>
-                <td><p id="errMsg" style="display: none"></p></td>
-                <td><button type="button" class="btn btn-primary btn-sm" id="logIn">Submit</button></td>
-            </tr>
-            {{/each}}
-        </table>
-    </div>
- -->
+
     {{> header}}
-    <div class="container-fluid user" style="display: block">
+    <div class="container-fluid user">
         <div class="row">
             {{#each bars}}
 
@@ -31,23 +20,9 @@
 
         <div><p id="errMsg" style="display: none"></p></div>
 
-
         <div class="admin" >
-            <a href="" class="showAdmin">Admin Sign In</a>
-            <!-- <button type="button" class="btn btn-primary btn-sm showAdmin">Admin Sign In</button> -->
-            <form style="display:none" class="adminSignIn">
-                <div class="form-group">
-                    <label for="text">Username:</label>
-                    <input type="text" class="form-control" id="text">
-                </div>
-                <div class="form-group">
-                    <label for="pwd">Password:</label>
-                    <input type="password" class="form-control" id="pwd">
-                </div>
-                <div><p id="adminErrrMsg" style="display: none"></p></div>
-                <button type="button" class="btn btn-primary btn-sm" id="toAdmin">Submit</button>
-                <div><a href="/adminReg">Admin Reg</a></div>
-            </form>
+        <hr>
+            <div id="signInAdmin"><a href="" class="showAdmin">ADMIN SIGN IN</a></div>
         </div>
 </template>
 
@@ -55,4 +30,22 @@
     <header id="header" style="display:block">
         <h1 >Karoke Central</h1>
     </header>
+</template>
+
+<template name="admin">
+    {{> header}}
+    <div id="admin">
+        <form class="adminSignIn">
+            <div class="form-group">
+                <input type="text" class="form-control" id="text" placeholder="USERNAME">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="pwd" placeholder="PASSWORD">
+            </div>
+            <button type="button" class="btn btn-primary btn-sm" id="toAdmin">SUBMIT</button>
+            <div><p id="adminErrrMsg" style="display: none"></p></div>
+            <hr>
+            <div id="toReg"><a href="/adminReg">ADMIN REGISTRATION</a></div>
+        </form>
+    </div>
 </template>
