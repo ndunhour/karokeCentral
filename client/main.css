@@ -157,26 +157,28 @@ li:hover {
 .admin{
     text-align: center;
 }
-button#errMsg.btn.btn-sm{
+button#errMsg.btn.btn-primary{
     padding-top: 6px;
     padding-bottom: 6px;
     border: none !important;
     background-color: #d43256;
     width: 40%;
-    margin: auto;
+    margin: auto !important;
     box-shadow: 3px 3px #fe9593 !important;
-    color: white;
+    cursor: default;
 }
-button#errMsg.btn.btn-sm:active{
+button#errMsg.btn.btn-primary:active{
     background-color: #d43256;
-    transform: translateY(4px);
+    cursor: default;
     border: none;
 }
-button#errMsg.btn.btn-sm:focus{
+button#errMsg.btn.btn-primary:focus{
     outline: none;
-
+    cursor: default;
 }
-
+button#errMsg.btn.btn-primary:hover{
+    cursor: default;
+}
 button#logIn.btn.btn-primary.btn-sm{
     padding-top: 6px;
     padding-bottom: 6px;

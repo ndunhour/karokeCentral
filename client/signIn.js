@@ -39,10 +39,11 @@ Template.signIn.events({
         }else{
             $('#errMsg').show()
             .text("INVALID SESSION ID ENTERED")
+            .css("display", "block")
             .fadeIn(800)
-            // .delay(1500)
-            // .fadeOut(500);
-            // $('.sessionID').val('');
+            .delay(1500)
+            .fadeOut(500);
+            $('.sessionID').val('');
         }
     },
     'click .showAdmin': function(e){
