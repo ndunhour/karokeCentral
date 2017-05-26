@@ -37,12 +37,12 @@ Template.signIn.events({
                 Router.go('/userDash/' + succ);
             });
         }else{
-            $('p').show()
+            $('#errMsg').show()
             .text("INVALID SESSION ID ENTERED")
             .fadeIn(800)
-            .delay(1500)
-            .fadeOut(500);
-            $('.sessionID').val('');
+            // .delay(1500)
+            // .fadeOut(500);
+            // $('.sessionID').val('');
         }
     },
     'click .showAdmin': function(e){

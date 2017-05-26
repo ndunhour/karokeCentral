@@ -1,4 +1,8 @@
-/* CSS declarations go here */
+/* CSS declarations go here
+    blue #1f68bf
+    light pinl #fe9593
+    dark pink #d43256
+    light blue #58cee3*/
 body{
   font-family: sans-serif;
   background-color: #1f68bf;
@@ -153,17 +157,47 @@ li:hover {
 .admin{
     text-align: center;
 }
-p#errMsg{
-    text-align: center;
-    background-color: #fd4b47;
-    border: 1px solid #fd4b47;
-    color: white;
-    width: 60%;
+button#errMsg.btn.btn-sm{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border: none !important;
+    background-color: #d43256;
+    width: 40%;
     margin: auto;
-    margin-top: 5px;
+    box-shadow: 3px 3px #fe9593 !important;
+    color: white;
+}
+button#errMsg.btn.btn-sm:active{
+    background-color: #d43256;
+    transform: translateY(4px);
+    border: none;
+}
+button#errMsg.btn.btn-sm:focus{
+    outline: none;
 
 }
 
+button#logIn.btn.btn-primary.btn-sm{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border: none !important;
+    background-color: #fe9593;
+    width: 100%;
+    margin: auto;
+    box-shadow: 3px 3px #d43256!important;
+}
+button#logIn.btn.btn-primary.btn-sm:active{
+    background-color: #fe9593;
+    transform: translateY(4px);
+    border: none;
+}
+button#logIn.btn.btn-primary.btn-sm:focus{
+    outline: none;
+}
+
+input.form-control.sessionID{
+    border-color: #fe9593;
+}
 /***********************************/
 @media only screen and (max-width: 500px) and (min-width: 300px){
 [class*="col-"] {
