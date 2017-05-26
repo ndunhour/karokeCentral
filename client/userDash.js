@@ -6,7 +6,6 @@ import './userDash.html';
 import './userDash.css';
 
 Template.userDash.onCreated( function(){
-    $('.inputField').focus();
 });
 
 Template.userDash.rendered = function(){

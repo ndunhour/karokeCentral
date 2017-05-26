@@ -3,8 +3,6 @@ import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
 
 import './signIn.html';
-import './admin.html';
-
 
 import { SessionId } from '../imports/api/sessionId.js';
 import { Bars } from '../imports/api/bars.js';
@@ -40,28 +38,21 @@ Template.signIn.events({
             });
         }else{
             $('p').show()
-            .text("Invalid Session Id")
+            .text("INVALID SESSION ID ENTERED")
             .fadeIn(800)
             .delay(1500)
             .fadeOut(500);
             $('.sessionID').val('');
         }
     },
-    // 'click .showAdmin': function(e){
-    //     event.preventDefault();
-    //     $('.user').fadeOut(400);
-    //     $('.showAdmin').fadeOut(400);
-    //     $('.adminSignIn').fadeIn(800);
-    // },
+    'click .showAdmin': function(e){
+        event.preventDefault();
+        $('.user').fadeOut(400);
+        $('.showAdmin').fadeOut(400);
+        $('.adminSignIn').fadeIn(800);
+    },
     'click #signInAdmin': function(e){
         Router.go('/adminReg');
-    },
-    'click .nav-pills li': function( event, template ) {
-        var currentTab = $( event.target ).closest( "li" );
-        currentTab.addClass( "active" );
-        $( ".nav-pills li" ).not( currentTab ).removeClass( "active" );
-
-        template.currentTab.set( currentTab.data( "template" ) );
     },
     'click #toAdmin': function(e){
         event.preventDefault();

@@ -153,6 +153,16 @@ li:hover {
 .admin{
     text-align: center;
 }
+p#errMsg{
+    text-align: center;
+    background-color: #fd4b47;
+    border: 1px solid #fd4b47;
+    color: white;
+    width: 60%;
+    margin: auto;
+    margin-top: 5px;
+
+}
 
 /***********************************/
 @media only screen and (max-width: 500px) and (min-width: 300px){

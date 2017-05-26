@@ -25,7 +25,7 @@ button.toAdmin.btn.btn-primary.btn.sm{
     border: none;
 }
 button.toAdmin.btn.btn-primary.btn.sm:hover{
-    background-color: #fe9593;
+    background-color: #fe9593;  /*gets ride of that blue outline when clicking button*/
 }
 button.toAdmin.btn.btn-primary.btn.sm:active{
     background-color: #fe9593;
@@ -45,13 +45,24 @@ form.adminSignIn hr{
 
 
 /* *********** SIGN IN CSS ****************/
-#signInAdmin{
+button.btn.btn-primary.showAdmin{
     padding-top: 6px;
     padding-bottom: 6px;
-    border: 1px solid #fe9593;
+    border: none !important;
     background-color: #fe9593;
+    width: 30%;
+    margin: auto;
+    box-shadow: 3px 3px #d43256!important;
 }
-#signInAdmin a{
+button.btn.btn-primary.showAdmin:active{
+    background-color: #fe9593;
+    transform: translateY(4px);
+    border: none;
+}
+button.btn.btn-primary.showAdmin:focus{
+    outline: none;
+}
+button.btn.btn-primary.showAdmin#signInAdmin{
     color: white;
     text-shadow: #555;
 }
