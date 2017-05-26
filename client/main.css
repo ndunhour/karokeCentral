@@ -179,22 +179,20 @@ button#errMsg.btn.btn-primary:focus{
 button#errMsg.btn.btn-primary:hover{
     cursor: default;
 }
-button#logIn.btn.btn-primary.btn-sm{
-    padding-top: 6px;
-    padding-bottom: 6px;
-    border: none !important;
+button#logIn.btn{
     background-color: #fe9593;
     width: 100%;
-    margin: auto;
+    color: white;
+    border: none !important;
     box-shadow: 3px 3px #d43256!important;
 }
-button#logIn.btn.btn-primary.btn-sm:active{
-    background-color: #fe9593;
-    transform: translateY(4px);
-    border: none;
+button#logIn.btn:focus{
+    border: none !important;
+    outline: none !important;
 }
-button#logIn.btn.btn-primary.btn-sm:focus{
-    outline: none;
+button#logIn.btn:active{
+    box-shadow: 1px 1px #fe9593!important;
+    transform: translateY(4px);
 }
 
 input.form-control.sessionID{

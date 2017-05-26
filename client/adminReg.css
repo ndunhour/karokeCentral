@@ -48,21 +48,19 @@ form.adminSignIn hr{
 
 /* *********** SIGN IN CSS ****************/
 button.btn.btn-primary.showAdmin{
-    padding-top: 6px;
-    padding-bottom: 6px;
-    border: none !important;
     background-color: #fe9593;
     width: 50%;
-    margin: auto;
+    color: white;
+    border: none !important;
     box-shadow: 3px 3px #d43256!important;
 }
-button.btn.btn-primary.showAdmin:active{
-    background-color: #fe9593;
-    transform: translateY(4px);
-    border: none;
-}
 button.btn.btn-primary.showAdmin:focus{
-    outline: none;
+    border: none !important;
+    outline: none !important;
+}
+button.btn.btn-primary.showAdmin:active{
+    box-shadow: 1px 1px #fe9593!important;
+    transform: translateY(4px);
 }
 button.btn.btn-primary.showAdmin#signInAdmin{
     color: white;
@@ -96,22 +94,19 @@ input#ra.form-control{
     border-color: #fe9593;
 }
 button#getToAdmin.btn.btn-default{
-    padding-top: 6px;
-    padding-bottom: 6px;
-    border: none !important;
     background-color: #fe9593;
     width: 80%;
-    margin: auto;
-    box-shadow: 3px 3px #d43256!important;
     color: white;
-}
-button#getToAdmin.btn.btn-default:active{
-    background-color: #fe9593;
-    transform: translateY(4px);
-    border: none;
+    border: none !important;
+    box-shadow: 3px 3px #d43256!important;
 }
 button#getToAdmin.btn.btn-default:focus{
-    outline: none;
+    border: none !important;
+    outline: none !important
+}
+button#getToAdmin.btn.btn-default:active{
+    box-shadow: 1px 1px #fe9593!important;
+    transform: translateY(4px);
 }
 
 button#raErrMsg.btn.btn-primary{
