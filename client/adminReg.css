@@ -52,7 +52,7 @@ button.btn.btn-primary.showAdmin{
     padding-bottom: 6px;
     border: none !important;
     background-color: #fe9593;
-    width: 30%;
+    width: 50%;
     margin: auto;
     box-shadow: 3px 3px #d43256!important;
 }
@@ -85,4 +85,64 @@ div.container-fluid.user div.row div.col-md-12 div.col-xs-2 button{
     background-color: #fe9593;
     border-color: #fe9593;
     width: 100%;
+}
+
+/************ ADMIN SIGN IN ****************/
+#restArea p{
+    font-weight: bold;
+    font-size: 1em;
+}
+input#ra.form-control{
+    border-color: #fe9593;
+}
+button#getToAdmin.btn.btn-default{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border: none !important;
+    background-color: #fe9593;
+    width: 80%;
+    margin: auto;
+    box-shadow: 3px 3px #d43256!important;
+    color: white;
+}
+button#getToAdmin.btn.btn-default:active{
+    background-color: #fe9593;
+    transform: translateY(4px);
+    border: none;
+}
+button#getToAdmin.btn.btn-default:focus{
+    outline: none;
+}
+
+button#raErrMsg.btn.btn-primary{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border: none !important;
+    background-color: #d43256;
+    width: 80%;
+    margin: auto !important;
+    box-shadow: 3px 3px #fe9593 !important;
+    cursor: default;
+}
+button#raErrMsg.btn.btn-primary:active{
+    background-color: #d43256;
+    cursor: default;
+    border: none;
+}
+button#raErrMsg.btn.btn-primary:focus{
+    outline: none;
+    cursor: default;
+}
+button#raErrMsg.btn.btn-primary:hover{
+    cursor: default;
+}
+
+input#text.form-control{
+    border-color: #58cee3;
+}
+input#pw1.form-control{
+    border-color: #58cee3;
+}
+input#pw2.form-control{
+    border-color: #58cee3;
 }

@@ -40,8 +40,9 @@ Template.adminReg.events({
                 });
 
         }else{
-            $('p').show()
-            .text("Passwords do not match")
+            $('#raErrMsg').show()
+            .text("PASSWORDS DO NOT MATCH")
+            .css("display", "block")
             .fadeIn(800)
             .delay(1500)
             .fadeOut(500);
@@ -53,9 +54,17 @@ Template.adminReg.events({
         if ($('#ra').val() === 'admin'){
             $('.admin').css('display','block');
             $('.adminPwd').css('display', 'none');
-        }else {
+        }else if($('#ra').val() === ""){
             $('#raErrMsg').show()
-                .text("Incorrect Password")
+                .text("ENTER A PASSWORD")
+                .css("display", "block")
+                .fadeIn(800)
+                .delay(1500)
+                .fadeOut(500);
+        }else{
+            $('#raErrMsg').show()
+                .text("INCORRECT PASSWORD")
+                .css("display", "block")
                 .fadeIn(800)
                 .delay(1500)
                 .fadeOut(500);

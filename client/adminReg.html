@@ -1,34 +1,26 @@
 <template name="adminReg">
     {{> header}}
-    <div class="adminPwd" style="display:block">
-            <div class="form-group">
-                <label for="ra">Restricted Area</label>
+    <div class="containter-fluid adminPwd">
+        <div class="row" id="restArea" style="display:block">
+            <div class="col-xs-12"><p for="ra">Restricted Area</p></div>
+
+
+        </div>
+
+        <div class="row">
+            <div class="col-xs-8 form-group">
                 <input type="password" class="form-control" id="ra" placeholder="Enter Password">
             </div>
-            <div><p id="raErrMsg" style="display: none"></p></div>
-            <button type="submit" class="btn btn-default" id="getToAdmin">Submit</button>
+            <div class="col-xs-4">
+                <button type="submit" class="btn btn-default" id="getToAdmin">Submit</button>
+            </div>
+        </div>
+
+        <div><button class="btn btn-primary" id="raErrMsg" style="display: none;"></button>
+</div>
 
     </div>
 
-<!--     <div class="admin" style="display:none">
-        <form class="adminSignIn">
-            <div class="form-group">
-                <label for="text">Username:</label>
-                <input type="text" class="form-control" id="text">
-            </div>
-            <div class="form-group">
-                <label for="text">Password:</label>
-                <input type="text" class="form-control" id="pw1">
-            </div>
-            <div class="form-group">
-                <label for="text">Re-enter Password:</label>
-                <input type="text" class="form-control" id="pw2">
-            </div>
-            <button type="submit" class="btn btn-default" id="adminReg">Submit</button>
-            <button type="submit" class="btn btn-default" id="adminCancel">Cancel</button>
-
-        </form>
-    </div> -->
     <div class="container-fluid admin" style="display:none">
         <div class="row">
             <div class="col-xs-12">
