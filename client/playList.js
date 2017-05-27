@@ -21,34 +21,25 @@ Template.playList.helpers({
     showRequests() {
         return Requests.find({});
     },
-    work() {
-        if(Meteor.users.find().count() === 0){
-            return 'none';
-        }else{
-            return 'block';
-        }
-
-    }
 
 });
 
 Template.playList.events({
-    'click #deleteSong': function(event, template){
-        event.preventDefault();
-        const deleteSong = event.target.parentNode.id;
+    'click #playListRow': function(e, t){
+        e.preventDefault();
+        const deleteSong = e.currentTarget.children[1].children.id.textContent;
         Session.set('deleteSong', deleteSong);
         if(Meteor.users.find().count() > 0){
             $('.confirm').css('display', 'block');
         }
     },
-    'click .cancelBtn': function(event, template){
-        event.preventDefault();
+    'click .cancelBtn': function(e, t){
+        e.preventDefault();
         $('.confirm').css('display', 'none');
         $('.playlist').css('display', 'block');
     },
     'click .confirmDelete': function(e, t){
         e.preventDefault();
-        console.log('click')
         Meteor.call('deleteSong', Session.get('deleteSong'), function(err){
             if(err){
                 console.log(err.reason);

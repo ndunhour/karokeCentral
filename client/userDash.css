@@ -55,11 +55,12 @@ p#songId{
 }
 
 /********** list ***************/
-#row{
+#resultRow{
     padding-right: 0 !important;
     padding-left: 0 !important;
     border-bottom: 1px solid #347b88;
 }
+
 #id{
     margin-bottom: 0 !important;
     padding-right: 0 !important;
@@ -108,3 +109,5 @@ button#errMsg.btn.btn-primary.requestBox:focus{
 button#errMsg.btn.btn-primary.requestBox:hover{
     cursor: default;
 }
+
+

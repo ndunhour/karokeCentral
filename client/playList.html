@@ -1,5 +1,16 @@
 <template name="playList">
+    <div class="container-fluid playList">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="input-group playListPageHeader">
+                    <p>PLAYLIST</p>
+                </div>
+          </div>
+        </div>
+    </div>
+
     {{> nav}}
+
     <div class="confirm" style="display:none">
         <table>
             <tr>
@@ -11,23 +22,40 @@
         </table>
     </div>
 
-    <div class="playList" style="display:block">
-        <table id="deleteSong">
-            <tr id="playListTH">
-                <th>Artist</th>
-                <th>Title</th>
-                <th>Song ID</th>
-            </tr>
-            {{#each showRequests}}
-            <tr id="{{songId}}">
-                <td>{{artist}}</td>
-                <td>{{title}}</td>
-                <td>{{songId}}</td>
-                <!-- <td id="deleteBtn" style="display:{{work}}"><button type="button" class="btn btn-primary btn-sm confirmBtn" id="{{_id}}">Delete Song</button></td> -->
-            </tr>
-            {{/each}}
-        </table>
+    <div class="container-fluid">
+        <div class="row" id="playListHeader">
+            <div class="col-xs-12">
+                <div class="col-xs-9">
+                    <p id="song">Song</p>
+                </div>
+                <div class="col-xs-3">
+                    <p id="songId">SongId</p>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <div class="container-fluid" id="playlistTable">
+            {{#each showRequests}}
+        <div class="row" id="{{songId}}">
+            <div class="col-xs-12" id="playListRow">
+                <div class="col-xs-9 artistTab">
+                    <p id="artist">{{artist}}</p>
+                    <p id="title">{{title}}</p>
+                </div>
+                <div class="col-xs-3 idTab">
+                    <p id="id">{{songId}}</p>
+                </div>
+            </div>
+        </div>
+            {{/each}}
+    </div>
+
+
+
+
+
+
 
 
 </template>

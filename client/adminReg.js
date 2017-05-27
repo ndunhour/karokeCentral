@@ -38,7 +38,6 @@ Template.adminReg.events({
                 password: pw1
             }, function(error){
                     if(error){
-                        console.log(error.reason);
                         $('#adminRegErrMsg').show()
                             .text(error.reason)
                             .fadeIn(800)

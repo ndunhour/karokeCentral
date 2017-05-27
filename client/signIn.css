@@ -1,4 +1,4 @@
-******* layout ********
+/******** layout *********/
 div.container-fluid.user div.row div.col-md-12 div.col-xs-10{
     margin-top: 5px;
     margin-bottom: 5px;
@@ -75,4 +75,71 @@ button.btn.btn-primary.showAdmin:focus{
 button.btn.btn-primary.showAdmin:active{
     box-shadow: 1px 1px #1f68bf!important;
     transform: translateY(4px);
+}
+
+/********** SIGN INTO ADMIN ************/
+div#signInAdmin > button.btn{
+    background-color: #1f68bf;
+    width: 70%;
+    color: white;
+    border: none !important;
+    box-shadow: 3px 3px #123e72!important;
+}
+div#signInAdmin > button.btn:active{
+    box-shadow: 1px 1px #1f68bf!important;
+    transform: translateY(4px);
+}
+div#signInAdmin > button.btn:focus{
+    border: none !important;
+    outline: none !important;
+}
+/*********** ADMIN ********/
+form.adminSignIn{
+    text-align: center;
+}
+form.adminSignIn hr{
+    margin-bottom: 10px !important;
+    margin-top: 10px !important;
+    border-top: 1px solid #1f68bf;
+}
+form.adminSignIn input{
+    border-color: #1f68bf;
+}
+form.adminSignIn button{
+    background-color: #1f68bf;
+    width: 70%;
+    color: white;
+    border: none !important;
+    text-align: center;
+    box-shadow: 3px 3px #123e72!important;
+}
+form.adminSignIn button:active{
+    box-shadow: 1px 1px #1f68bf!important;
+    transform: translateY(4px);
+}
+form.adminSignIn button:focus{
+    border: none !important;
+    outline: none !important;
+}
+button#adminErrMsg.btn{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border: none !important;
+    background-color: #d43256;
+    width: 80%;
+    margin-bottom: 10px;
+    box-shadow: 3px 3px #fe9593 !important;
+    cursor: default;
+}
+button#adminErrMsg.btn:active{
+    background-color: #d43256;
+    cursor: default;
+    border: none;
+}
+button#adminErrMsg.btn:focus{
+    outline: none;
+    cursor: default;
+}
+button#adminErrMsg.btn:hover{
+    cursor: default;
 }

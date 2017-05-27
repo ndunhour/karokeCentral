@@ -21,7 +21,7 @@
     </div>
     <div class="admin" >
     <hr>
-        <div id="signInAdmin"><button class="btn btn-primary showAdmin">ADMIN SIGN IN</button></div>
+        <div id="signInAdmin"><button class="btn">ADMIN SIGN IN</button></div>
     </div>
 </template>
 
@@ -41,10 +41,10 @@
             <div class="form-group">
                 <input type="password" class="form-control" id="pwd" placeholder="PASSWORD">
             </div>
-            <button type="button" class="btn btn-primary btn-sm" id="toAdmin">SUBMIT</button>
-            <div><p id="adminErrrMsg" style="display: none"></p></div>
+            <div><button class="btn" id="adminErrMsg" style="display: none"></button></div>
+            <div><button type="button" class="btn btn-primary btn-sm" id="toAdmin">SUBMIT</button></div>
             <hr>
-            <div id="toReg"><a href="/adminReg">ADMIN REGISTRATION</a></div>
+            <div id="toReg"><button class="btn">ADMIN REGISTRATION</button></div>
         </form>
     </div>
 </template>

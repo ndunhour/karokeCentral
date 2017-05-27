@@ -46,24 +46,23 @@ Template.signIn.events({
             $('.sessionID').val('');
         }
     },
-    'click .showAdmin': function(e){
-        event.preventDefault();
-        $('.user').fadeOut(400);
-        $('.showAdmin').fadeOut(400);
-        $('.adminSignIn').fadeIn(800);
-    },
     'click #signInAdmin': function(e){
-        Router.go('/adminReg');
+        Router.go('/admin');
     },
+
+});
+
+
+Template.admin.events({
     'click #toAdmin': function(e){
-        event.preventDefault();
+        e.preventDefault();
         const username = $('#text').val();
         const password = $('#pwd').val();
 
         Meteor.loginWithPassword(username, password, function(err){
             if(err){
 
-                $('#adminErrrMsg').show()
+                $('#adminErrMsg').show()
                     .text(err.reason)
                     .fadeIn(800)
                     .delay(1500)
@@ -74,9 +73,10 @@ Template.signIn.events({
                 Router.go("/adminDash/" + Meteor.userId());
             }
         });
-
-
     },
-
-
+    'click #toReg': function(e){
+        e.preventDefault();
+        console.log('click');
+        Router.go('/adminReg');
+    }
 });
