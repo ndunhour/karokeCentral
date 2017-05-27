@@ -1,9 +1,20 @@
 <template name="userDash">
-        <div class="searchArea">
-            <form class="searchfield">
-                <input type="text" class="form-control inputField" placeholder="Search by Title or Artist"/>
-            </form>
+
+        <div class="container-fluid searchArea">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="input-group searchfield">
+                        <input type="text" class="form-control inputField" placeholder="Search by Artist or Title">
+                        <span class="input-group-btn">
+                            <button class="btn searchDB" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                      </span>
+                    </div><!-- /input-group -->
+              </div>
+            </div>
         </div>
+
+
+
     {{> nav}}
         <div class="requestBox" style="display:none">Your song has been requested</div>
 

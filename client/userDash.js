@@ -19,9 +19,9 @@ Template.userDash.helpers({
 });
 
 Template.userDash.events({
-    'submit .searchfield': function(event){
+    'click .searchDB': function(event){
         event.preventDefault();
-        const searchValue = event.target[0].value;
+        const searchValue = $('.inputField').val();
 
         Session.set('searchValue', searchValue);
 
