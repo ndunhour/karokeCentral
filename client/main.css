@@ -1,12 +1,6 @@
-/* CSS declarations go here
-    blue #1f68bf
-    light pinl #fe9593
-    dark pink #d43256
-    light blue #58cee3*/
 body{
   font-family: sans-serif;
-  background-color: #1f68bf;
-  background-image: linear-gradient(to bottom, #1f68bf, #d43256 100%);
+  background-color: #123e72;
   background-attachment: fixed;
   position: absolute;
   top: 0;
@@ -26,12 +20,16 @@ body{
 }
 
 header {
-  background: #58cee3;
-  background-image: linear-gradient(to bottom, #58cee3, #fe9593 100%);
+  background: #1f68bf;
+  background-image: linear-gradient(to bottom, #1f68bf, #58cee3 100%);
   padding: 20px 15px 15px 15px;
   position: relative;
   margin-bottom: 5px;
 }
+
+
+
+
 .navBar{
     margin-bottom: 3px;
 }
@@ -157,47 +155,10 @@ li:hover {
 .admin{
     text-align: center;
 }
-button#errMsg.btn.btn-primary{
-    padding-top: 6px;
-    padding-bottom: 6px;
-    border: none !important;
-    background-color: #d43256;
-    width: 80%;
-    margin: auto !important;
-    box-shadow: 3px 3px #fe9593 !important;
-    cursor: default;
-}
-button#errMsg.btn.btn-primary:active{
-    background-color: #d43256;
-    cursor: default;
-    border: none;
-}
-button#errMsg.btn.btn-primary:focus{
-    outline: none;
-    cursor: default;
-}
-button#errMsg.btn.btn-primary:hover{
-    cursor: default;
-}
-button#logIn.btn{
-    background-color: #fe9593;
-    width: 100%;
-    color: white;
-    border: none !important;
-    box-shadow: 3px 3px #d43256!important;
-}
-button#logIn.btn:focus{
-    border: none !important;
-    outline: none !important;
-}
-button#logIn.btn:active{
-    box-shadow: 1px 1px #fe9593!important;
-    transform: translateY(4px);
-}
 
-input.form-control.sessionID{
-    border-color: #fe9593;
-}
+
+
+
 /***********************************/
 @media only screen and (max-width: 500px) and (min-width: 300px){
 [class*="col-"] {

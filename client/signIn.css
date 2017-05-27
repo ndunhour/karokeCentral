@@ -1,0 +1,78 @@
+******* layout ********
+div.container-fluid.user div.row div.col-md-12 div.col-xs-10{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+div.container-fluid.user div.row div.col-md-12 div.col-xs-2{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+div.container-fluid.user div.row div.col-md-12 div.col-xs-2 button{
+    background-color: #fe9593;
+    border-color: #fe9593;
+    width: 100%;
+}
+
+input.form-control.sessionID{
+    border-color: #1f68bf;
+}
+
+button#logIn.btn{
+    background-color: #1f68bf;
+    width: 100%;
+    color: white;
+    border: none !important;
+    box-shadow: 3px 3px #123e72!important;
+}
+button#logIn.btn:focus{
+    border: none !important;
+    outline: none !important;
+}
+button#logIn.btn:active{
+    box-shadow: 1px 1px #1f68bf!important;
+    transform: translateY(4px);
+}
+
+button#errMsg.btn.btn-primary{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border: none !important;
+    background-color: #d43256;
+    width: 80%;
+    margin: auto !important;
+    box-shadow: 3px 3px #fe9593 !important;
+    cursor: default;
+}
+button#errMsg.btn.btn-primary:active{
+    background-color: #d43256;
+    cursor: default;
+    border: none;
+}
+button#errMsg.btn.btn-primary:focus{
+    outline: none;
+    cursor: default;
+}
+button#errMsg.btn.btn-primary:hover{
+    cursor: default;
+}
+div.admin hr{
+    margin-bottom: 10px !important;
+    margin-top: 10px !important;
+    border-top: 1px solid #1f68bf;
+}
+
+button.btn.btn-primary.showAdmin{
+    background-color: #1f68bf;
+    width: 50%;
+    color: white;
+    border: none !important;
+    box-shadow: 3px 3px #123e72!important;
+}
+button.btn.btn-primary.showAdmin:focus{
+    border: none !important;
+    outline: none !important;
+}
+button.btn.btn-primary.showAdmin:active{
+    box-shadow: 1px 1px #1f68bf!important;
+    transform: translateY(4px);
+}

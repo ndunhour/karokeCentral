@@ -22,6 +22,16 @@ Template.adminReg.events({
         const pw1 = $('#pw1').val();
         const pw2 = $('#pw2').val();
 
+        if(pw1 !== pw2){
+            $('#adminRegErrMsg').show()
+            .text("PASSWORDS DO NOT MATCH")
+            .css("display", "block")
+            .fadeIn(800)
+            .delay(1500)
+            .fadeOut(500);
+            $('')
+        }
+
         if( pw1 === pw2) {
             Accounts.createUser({
                 username: usernameReg,
@@ -39,15 +49,7 @@ Template.adminReg.events({
                     }
                 });
 
-        }else{
-            $('#raErrMsg').show()
-            .text("PASSWORDS DO NOT MATCH")
-            .css("display", "block")
-            .fadeIn(800)
-            .delay(1500)
-            .fadeOut(500);
         }
-
     },
     'click #getToAdmin': function(e){
         event.preventDefault();

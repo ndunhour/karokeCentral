@@ -1,114 +1,80 @@
-
-
-div.container-fluid.admin > div.row{
-    margin-bottom: 10px !important;
-    text-align: center;
-}
-div.container-fluid.admin > div.row > div.col-xs-6 > button{
-    background-color: #58cee3;
-    width: 100%;
-    color: #d43256;
-    border: none !important;
-    box-shadow: 3px 3px #fe9593!important;
-}
-div.container-fluid.admin > div.row > div.col-xs-6 > button:focus{
-    border: none !important;
-    outline: none !important;
-}
-div.container-fluid.admin > div.row > div.col-xs-6 > button:active{
-    box-shadow: 1px 1px #d43256!important;
-    transform: translateY(4px);
-}
-button.toAdmin.btn.btn-primary.btn.sm{
-    background-color: #fe9593;
-    outline: none;
-    text-shadow: #000 1px 1px;
-    color: #1f68bf;
-    border: none;
-}
-button.toAdmin.btn.btn-primary.btn.sm:hover{
-    background-color: #fe9593;  /*gets ride of that blue outline when clicking button*/
-}
-button.toAdmin.btn.btn-primary.btn.sm:active{
-    background-color: #fe9593;
-    transform: translateY(4px);
-}
-form.adminSignIn hr{
-    margin-bottom: 10px !important;
-    margin-top: 10px !important;
-    border-top: 1px solid #1f68bf;
-}
-#toReg{
-    padding-top: 6px;
-    padding-bottom: 6px;
-}
-
-
-
-
-/* *********** SIGN IN CSS ****************/
-button.btn.btn-primary.showAdmin{
-    background-color: #fe9593;
-    width: 50%;
-    color: white;
-    border: none !important;
-    box-shadow: 3px 3px #d43256!important;
-}
-button.btn.btn-primary.showAdmin:focus{
-    border: none !important;
-    outline: none !important;
-}
-button.btn.btn-primary.showAdmin:active{
-    box-shadow: 1px 1px #fe9593!important;
-    transform: translateY(4px);
-}
-button.btn.btn-primary.showAdmin#signInAdmin{
-    color: white;
-    text-shadow: #555;
-}
-div.admin hr{
-    margin-bottom: 10px !important;
-    margin-top: 10px !important;
-    border-top: 1px solid #fe9593;
-}
-div.container-fluid.user div.row div.col-md-12 div.col-xs-10{
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-div.container-fluid.user div.row div.col-md-12 div.col-xs-2{
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-div.container-fluid.user div.row div.col-md-12 div.col-xs-2 button{
-    background-color: #fe9593;
-    border-color: #fe9593;
-    width: 100%;
-}
-
-/************ ADMIN SIGN IN ****************/
+/********** RESTRICTED AREA *************/
 #restArea p{
     font-weight: bold;
     font-size: 1em;
+    color: #123e72;
 }
 input#ra.form-control{
-    border-color: #fe9593;
+    border-color: #1f68bf;
 }
 button#getToAdmin.btn.btn-default{
-    background-color: #fe9593;
+    background-color: #1f68bf;
     width: 80%;
     color: white;
     border: none !important;
-    box-shadow: 3px 3px #d43256!important;
+    box-shadow: 3px 3px #123e72!important;
 }
 button#getToAdmin.btn.btn-default:focus{
     border: none !important;
     outline: none !important
 }
 button#getToAdmin.btn.btn-default:active{
-    box-shadow: 1px 1px #fe9593!important;
+    box-shadow: 1px 1px #1f68bf!important;
     transform: translateY(4px);
 }
 
+/**************** REGISTER NEW ADMIN ACCT **************/
+input#text.form-control{
+    border-color: #1f68bf;
+}
+input#pw1.form-control{
+    border-color: #1f68bf;
+}
+input#pw2.form-control{
+    border-color: #1f68bf;
+}
+
+div.container-fluid.admin > div.row > div.col-xs-6 > button{
+    background-color: #1f68bf;
+    width: 80%;
+    color: white;
+    border: none !important;
+    box-shadow: 3px 3px #123e72!important;
+}
+div.container-fluid.admin > div.row > div.col-xs-6 > button:focus{
+    border: none !important;
+    outline: none !important;
+}
+div.container-fluid.admin > div.row > div.col-xs-6 > button:active{
+    box-shadow: 1px 1px #1f68bf!important;
+    transform: translateY(4px);
+}
+
+button#adminRegErrMsg.btn{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border: none !important;
+    background-color: #d43256;
+    color: white;
+    width: 80%;
+    margin: auto !important;
+    box-shadow: 3px 3px #fe9593 !important;
+    cursor: default;
+}
+button#adminRegErrMsg.btn:active{
+    background-color: #d43256;
+    cursor: default;
+    border: none;
+}
+button#adminRegErrMsg.btn:focus{
+    outline: none;
+    cursor: default;
+}
+button#adminRegErrMsg.btn:hover{
+    cursor: default;
+}
+
+/*register err msg*/
 button#raErrMsg.btn.btn-primary{
     padding-top: 6px;
     padding-bottom: 6px;
@@ -132,12 +98,62 @@ button#raErrMsg.btn.btn-primary:hover{
     cursor: default;
 }
 
-input#text.form-control{
-    border-color: #58cee3;
+/*structure of page*/
+div.container-fluid.admin > div.row{
+    margin-bottom: 10px !important;
+    text-align: center;
 }
-input#pw1.form-control{
-    border-color: #58cee3;
+
+
+
+
+
+/*+++++++++++++++ TO DELETE +++++++++++++++++++++++++++++++++*/
+
+/*
+button.toAdmin.btn.btn-primary.btn.sm{
+    background-color: #fe9593;
+    outline: none;
+    text-shadow: #000 1px 1px;
+    color: #1f68bf;
+    border: none;
 }
-input#pw2.form-control{
-    border-color: #58cee3;
+button.toAdmin.btn.btn-primary.btn.sm:hover{
+    background-color: #fe9593;  /*gets ride of that blue outline when clicking button*/
+/*}*/
+/*button.toAdmin.btn.btn-primary.btn.sm:active{
+    background-color: #fe9593;
+    transform: translateY(4px);
+}*/
+/*form.adminSignIn hr{
+    margin-bottom: 10px !important;
+    margin-top: 10px !important;
+    border-top: 1px solid #1f68bf;
+}*/
+/*#toReg{
+    padding-top: 6px;
+    padding-bottom: 6px;
+}*/
+
+
+
+
+/*button.btn.btn-primary.showAdmin{
+    background-color: #fe9593;
+    width: 50%;
+    color: white;
+    border: none !important;
+    box-shadow: 3px 3px #d43256!important;
 }
+button.btn.btn-primary.showAdmin:focus{
+    border: none !important;
+    outline: none !important;
+}
+button.btn.btn-primary.showAdmin:active{
+    box-shadow: 1px 1px #fe9593!important;
+    transform: translateY(4px);
+}
+button.btn.btn-primary.showAdmin#signInAdmin{
+    color: white;
+    text-shadow: #555;
+}*/

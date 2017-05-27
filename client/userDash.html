@@ -14,20 +14,13 @@
         </div>
 
     {{> nav}}
-        <div class="requestBox" style="display:none">Your song has been requested</div>
 
-<!--         <div class="results">
-            <table class="table" id="searchTable">
-                <tr id="searchTH">
-                    <th>Song</th>
-                    <th>Song ID</th>
-                </tr>
-                <tr id="{{songId}}">
-                    <td><p id="artist">{{Artist}}</p><p id="title">{{Title}}</p></td>
-                    <td>{{ID}}</td>
-                </tr>
-            </table>
-        </div> -->
+        <div>
+            <button class="btn btn-primary requestBox" id="errMsg" style="display: none"></button>
+        </div>
+
+
+
         <div class="container-fluid">
             <div class="row" id="searchHeader">
                 <div class="col-md-12">
@@ -56,29 +49,4 @@
             </div>
                 {{/each}}
         </div>
-
-<!--         <div class="row">
-            <div class="playlist">
-                <table class="table table-striped table-bordered">
-                    <thead>
-                        <tr>
-                            <td>Title</td>
-                            <td>Sung by</td>
-                            <td>Delete Song</td>
-                        </tr>
-                    </thead>
-                    {{#each showList}}
-                    <tbody>
-                        <tr>
-                            <td>{{Artist}}</td>
-                            <td>{{Title}}</td>
-                            <td>{{ID}}</td>
-
-                            <td><button type="button" class="btn btn-primary btn-sm js-confirm" id={{_id}}>Delete Song</button></td>
-                        </tr>
-                    </tbody>
-                    {{/each}}
-                </table>
-            </div>
-        </div> -->
 </template>

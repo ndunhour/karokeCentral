@@ -46,8 +46,10 @@ Template.userDash.events({
 
         const owner = window.location.pathname.split('/').slice(2)[0];
 
-        $('.requestBox').text(title + " has been requested for you")
+        $('.requestBox')
+            .text(title + " has been requested for you")
             .fadeIn(800)
+            .css("display", "block")
             .delay(1500)
             .fadeOut(500);
 

@@ -1,64 +1,45 @@
 .searchArea{
-    border: 1px solid #1f68bf;
+    border: 1px solid #58cee3;
     padding: 10px;
-    background-color: #1f68bf;
+    background-color: #58cee3;
 }
-.inputField {
+input.form-control.inputField{
     text-align: center;
     box-sizing: border-box;
     background-color: white;
     width: 100%;
     font-size: 1em;
-    border: 1px solid #1f68bf !important;
+    border: 1px solid white !important;
     color: #555 !important;
-    box-shadow: none !important;
+    box-shadow: 3px 3px #347b88!important;
 }
-/*button.btn.searchDB{
-    background-color: #555;
-}
-button.btn.searchDB:active{
-    background-color: #555;
-    transform: translateY(4px)
-}*/
-
 button.btn.searchDB{
-    background-color: #fe9593;
+    background-color: white;
     width: 100%;
-    color: white;
+    color: #555;
     border: none !important;
-    box-shadow: 3px 3px #d43256!important;
+    box-shadow: 3px 3px #347b88!important;
 }
 button.btn.searchDB:focus{
     border: none !important;
     outline: none !important;
 }
 button.btn.searchDB:active{
-    box-shadow: 1px 1px #fe9593!important;
+    box-shadow: 1px 1px #555!important;
     transform: translateY(4px);
 }
 span.glyphicon.glyphicon-search#searchGlyph{
-    color:white;
-
-}
-.requestBox{
-    display: block;
-    background-color: #fe9593 !important;
-    color: #1f68bf !important;
-    /*text-shadow: #000 1px 1px;*/
-    padding: 10px;
-    margin-top: 10px;
-    font-weight: bold;
-    text-align: center;
+    color: #555;
 
 }
 
-/***********************************/
+/******** list header **********/
 #searchHeader{
     font-weight: bold;
     font-size: 1em;
-    background-color: #1f68bf;
+    background-color: #58cee3;
     padding: 3px 3px !important;
-    color: white;
+    color: #555;
     margin-top: 10px !important;
 }
 p#song{
@@ -73,14 +54,21 @@ p#songId{
 
 }
 
-/**************************************/
-#resultsTable{
-
-}
+/********** list ***************/
 #row{
     padding-right: 0 !important;
     padding-left: 0 !important;
-    border-bottom: 1px solid #1f68bf;
+    border-bottom: 1px solid #347b88;
+}
+#id{
+    margin-bottom: 0 !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    text-align: right !important;
+}
+.idTab{
+    padding-right: 0 !important;
+    padding-left: 0 !important;
 }
 .artistTab{
     padding-right: 0 !important;
@@ -96,47 +84,27 @@ p#songId{
     padding-right: 0 !important;
     padding-left: 0 !important;
 }
-.idTab{
-    padding-right: 0 !important;
-    padding-left: 0 !important;
-}
-#id{
-    margin-bottom: 0 !important;
-    padding-right: 0 !important;
-    padding-left: 0 !important;
-    text-align: right !important;
-}
 
-
-/************************************/
-table {
-    border-collapse: collapse;
-    width: 100%;
-
+/******** request song notification ***************/
+button#errMsg.btn.btn-primary.requestBox{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border: none !important;
+    background-color: #fe9593;
+    width: 80%;
+    margin: auto !important;
+    box-shadow: 3px 3px #985958 !important;
+    cursor: default;
 }
-
-th, td {
-    padding: 5px;
-    text-align: justify;
-    border-bottom: 1px solid #ddd;
+button#errMsg.btn.btn-primary.requestBox:active{
+    background-color: #fe9593;
+    cursor: default;
+    border: none;
 }
-tr:hover {
-    background-color: #e5e5e5;
+button#errMsg.btn.btn-primary.requestBox:focus{
+    outline: none;
+    cursor: default;
 }
-tr:active {
-  transform: translateY(4px);
+button#errMsg.btn.btn-primary.requestBox:hover{
+    cursor: default;
 }
-table#searchTable.table > tr#searchTH{
-    background-color: #1f68bf !important;
-    color: #fe9593 !important;
-    text-shadow: #000 1px 1px;
-}
-table#deleteSong > tr#playListTH >th{
-    background-color: #58cee3 !important;
-    color: #d43256 !important;
-    text-shadow: #000 1px 1px;
-}
-
-
-
-
