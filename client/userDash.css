@@ -13,7 +13,33 @@
     color: #555 !important;
     box-shadow: none !important;
 }
+/*button.btn.searchDB{
+    background-color: #555;
+}
+button.btn.searchDB:active{
+    background-color: #555;
+    transform: translateY(4px)
+}*/
 
+button.btn.searchDB{
+    background-color: #fe9593;
+    width: 100%;
+    color: white;
+    border: none !important;
+    box-shadow: 3px 3px #d43256!important;
+}
+button.btn.searchDB:focus{
+    border: none !important;
+    outline: none !important;
+}
+button.btn.searchDB:active{
+    box-shadow: 1px 1px #fe9593!important;
+    transform: translateY(4px);
+}
+span.glyphicon.glyphicon-search#searchGlyph{
+    color:white;
+
+}
 .requestBox{
     display: block;
     background-color: #fe9593 !important;
