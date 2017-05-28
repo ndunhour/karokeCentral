@@ -35,17 +35,17 @@ Template.nav.helpers({
     showAdminDash(){
         return Template.instance().showAdminDash.get();
     },
-    user: function(){
-        if(Meteor.users.find().count() === 0){
-            return '/userDash/' + Template.instance().userId.get();
-        }else{
+    user(){
+        if(Meteor.users.findOne({_id: Template.instance().userId.get()})){
             return '/adminDash/' + Template.instance().userId.get();
+        }else{
+            return '/userDash/' + Template.instance().userId.get();
         }
     },
-    playList: function(){
+    playList(){
         return Template.instance().userId.get();
     },
-    settings: function(){
+    settings(){
 
         return Template.instance().userId.get();
 

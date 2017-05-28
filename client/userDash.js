@@ -36,7 +36,7 @@ Template.userDash.helpers({
 Template.userDash.events({
     'click .searchDB': function(event, template){
         event.preventDefault();
-        const searchValue = $('.inputField').val();
+        const searchValue = $('.inputField').val().toUpperCase();
 
         Session.set('searchValue', searchValue);
 

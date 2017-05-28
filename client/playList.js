@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
+import { ReactiveVar } from 'meteor/reactive-var';
 
 import './playList.html';
 
@@ -10,7 +11,10 @@ import { CreateSessionUser } from '../imports/api/createSessionUser.js';
 
 
 Template.playList.created = function(){
+    this.userId = new ReactiveVar('');
 
+    const split = window.location.pathname.split('/').slice(2)[0];
+    this.userId.set(split);
 };
 
 Template.playList.rendered = function(){
@@ -24,11 +28,11 @@ Template.playList.helpers({
 });
 
 Template.playList.events({
-    'click #playListRow': function(e, t){
+    'click #playListRow': function(e, template){
         e.preventDefault();
         const deleteSong = e.currentTarget.children[1].children.id.textContent;
         Session.set('deleteSong', deleteSong);
-        if(Meteor.users.find().count() > 0){
+        if(Meteor.users.findOne({_id: template.userId.get()})){
             $('.confirmModal').css('display', 'block');
         }
     },
