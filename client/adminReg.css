@@ -22,6 +22,25 @@ button#getToAdmin.btn.btn-default:active{
     box-shadow: 1px 1px #1f68bf!important;
     transform: translateY(4px);
 }
+div.rtnHome > button.btn.btn-sm{
+/*    position: fixed;
+    top: 50%;*/
+/*    display: block;
+    margin: auto;*/
+    background-color: #1f68bf;
+    color: white;
+    border: none !important;
+    box-shadow: 3px 3px #123e72!important;
+}
+div.rtnHome > button.btn.btn-sm:focus{
+    border: none !important;
+    outline: none !important;
+}
+div.rtnHome > button.btn.btn-sm:active{
+    box-shadow: 1px 1px #1f68bf!important;
+    transform: translateY(4px);
+}
+
 
 /**************** REGISTER NEW ADMIN ACCT **************/
 input#text.form-control{
@@ -49,7 +68,6 @@ div.container-fluid.admin > div.row > div.col-xs-6 > button:active{
     box-shadow: 1px 1px #1f68bf!important;
     transform: translateY(4px);
 }
-
 button#adminRegErrMsg.btn{
     padding-top: 6px;
     padding-bottom: 6px;
@@ -84,6 +102,7 @@ button#raErrMsg.btn.btn-primary{
     margin: auto !important;
     box-shadow: 3px 3px #fe9593 !important;
     cursor: default;
+
 }
 button#raErrMsg.btn.btn-primary:active{
     background-color: #d43256;
@@ -96,6 +115,9 @@ button#raErrMsg.btn.btn-primary:focus{
 }
 button#raErrMsg.btn.btn-primary:hover{
     cursor: default;
+}
+div.rtnHome{
+    margin-top: 15px;
 }
 
 /*structure of page*/

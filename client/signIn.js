@@ -76,7 +76,7 @@ Template.admin.events({
     },
     'click #toReg': function(e){
         e.preventDefault();
-        console.log('click');
         Router.go('/adminReg');
-    }
+    },
+
 });

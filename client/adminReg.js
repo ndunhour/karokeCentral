@@ -30,7 +30,8 @@ Template.adminReg.events({
             .fadeIn(800)
             .delay(1500)
             .fadeOut(500);
-            $('')
+            $('#pw1').val('');
+            $('#pw2').val('');
         }
 
         if( pw1 === pw2) {
@@ -44,6 +45,9 @@ Template.adminReg.events({
                             .fadeIn(800)
                             .delay(1500)
                             .fadeOut(500);
+                            $('#text').val('');
+                            $('#pw1').val('');
+                            $('#pw2').val('');
                     } else {
                         Router.go('/adminDash/' + Meteor.userId());
                     }
@@ -71,8 +75,13 @@ Template.adminReg.events({
                 .delay(1500)
                 .fadeOut(500);
         }
+        $('#ra').val('');
     },
     'click #adminCancel': function(e){
+        e.preventDefault();
+        Router.go('/');
+    },
+    'click .rtnHome': function(e){
         e.preventDefault();
         Router.go('/');
     }
