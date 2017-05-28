@@ -21,7 +21,6 @@ Template.playList.helpers({
     showRequests() {
         return Requests.find({});
     },
-
 });
 
 Template.playList.events({

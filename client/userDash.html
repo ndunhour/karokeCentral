@@ -15,36 +15,70 @@
 
     {{> nav}}
 
-        <div>
-            <button class="btn btn-primary requestBox" id="errMsg" style="display: none"></button>
-        </div>
-
-        <div class="container-fluid">
-            <div class="row" id="searchHeader">
-                <div class="col-md-12">
-                    <div class="col-xs-8">
-                        <p id="song">SONG</p>
-                    </div>
-                    <div class="col-xs-4">
-                        <p id="songId">SONG ID</p>
+        <div class="b4search" style="display: block">
+            <div class="container-fluid">
+                <div class="row" id="b4SearchHeader">
+                    <div class="col-md-12">
+                        <div class="col-xs-8">
+                            <p id="song">SONG</p>
+                        </div>
+                        <div class="col-xs-4">
+                            <p id="songId">SONG ID</p>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="container-fluid" id="b4resultsTable">
+                    {{#each showList}}
+                <div class="row" id="{{ID}}">
+                    <div class="col-xs-12" id="resultRow">
+                        <div class="col-xs-9 artistTab">
+                            <p id="artist">{{Artist}}</p>
+                            <p id="title">{{Title}}</p>
+                        </div>
+                        <div class="col-xs-3 idTab">
+                            <p id="id">{{ID}}</p>
+                        </div>
+                    </div>
+                </div>
+                    {{/each}}
+            </div>
         </div>
 
-        <div class="container-fluid" id="resultsTable">
-                {{#each showList}}
-            <div class="row" id="{{ID}}">
-                <div class="col-xs-12" id="resultRow">
-                    <div class="col-xs-9 artistTab">
-                        <p id="artist">{{Artist}}</p>
-                        <p id="title">{{Title}}</p>
-                    </div>
-                    <div class="col-xs-3 idTab">
-                        <p id="id">{{ID}}</p>
+
+
+        <div class="afterSearch" style="display: none">
+            <div>
+                <button class="btn btn-primary requestBox" id="errMsg" style="display: none"></button>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row" id="searchHeader">
+                    <div class="col-md-12">
+                        <div class="col-xs-8">
+                            <p id="song">SONG</p>
+                        </div>
+                        <div class="col-xs-4">
+                            <p id="songId">SONG ID</p>
+                        </div>
                     </div>
                 </div>
             </div>
-                {{/each}}
+
+            <div class="container-fluid" id="resultsTable">
+                    {{#each showList}}
+                <div class="row" id="{{ID}}">
+                    <div class="col-xs-12" id="resultRow">
+                        <div class="col-xs-9 artistTab">
+                            <p id="artist">{{Artist}}</p>
+                            <p id="title">{{Title}}</p>
+                        </div>
+                        <div class="col-xs-3 idTab">
+                            <p id="id">{{ID}}</p>
+                        </div>
+                    </div>
+                </div>
+                    {{/each}}
+            </div>
         </div>
 </template>
