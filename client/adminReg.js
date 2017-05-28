@@ -5,6 +5,7 @@ import { ReactiveDict } from 'meteor/reactive-dict';
 import './adminReg.html';
 import './adminReg.css';
 
+
 Template.adminReg.created = function(){
 };
 

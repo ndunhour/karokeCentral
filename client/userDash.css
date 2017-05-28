@@ -32,7 +32,14 @@ span.glyphicon.glyphicon-search#searchGlyph{
     color: #555;
 
 }
-
+/*********** PRE-POPULATED LIST *************/
+#b4SearchHeader{
+    font-size: 1em;
+    background-color: #58cee3;
+    padding: 3px 3px !important;
+    color: #555;
+    margin-top: 10px !important;
+}
 /******** list header **********/
 #searchHeader{
     font-size: 1em;

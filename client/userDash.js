@@ -1,11 +1,16 @@
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
+import { ReactiveVar } from 'meteor/reactive-var';
 
 import './userDash.html';
 import './userDash.css';
 
+import { Songbook } from '../imports/api/songbook.js';
+
 Template.userDash.onCreated( function(){
+    this.showPreList = new ReactiveVar ( true );
+    this.showSearchList = new ReactiveVar ( false );
 });
 
 Template.userDash.rendered = function(){
@@ -13,13 +18,23 @@ Template.userDash.rendered = function(){
 };
 
 Template.userDash.helpers({
-  showList() {
-    return Session.get('songList');
-  },
+    showPreList(){
+        return Template.instance().showPreList.get();
+    },
+    showSearchList(){
+        return Template.instance().showSearchList.get();
+    },
+    showList() {
+        return Session.get('songList');
+    },
+    b4search() {
+        return Songbook.find({});
+    }
+
 });
 
 Template.userDash.events({
-    'click .searchDB': function(event){
+    'click .searchDB': function(event, template){
         event.preventDefault();
         const searchValue = $('.inputField').val();
 
@@ -27,15 +42,8 @@ Template.userDash.events({
 
         Meteor.call('findSong', Session.get('searchValue'), songs, function(err, result){
             Session.set('songList', result);
-            const makeList = Session.get('songList').map(list => {
-
-                const regex = new RegExp(Session.get('searchValue', 'gi'));
-                const artist = list.Artist.replace(regex, function(match){
-                    Session.set('songId', list.ID);
-                    return makeList;
-                });
-            });
-
+            template.showPreList.set ( false );
+            template.showSearchList.set ( true );
         });
         $('.inputField').val('');
     },
@@ -65,6 +73,5 @@ Template.userDash.events({
         }) ;
 
     },
-
 
 });

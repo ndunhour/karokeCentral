@@ -6,7 +6,7 @@ export const Bars = new Mongo.Collection('bars');
 
 if (Meteor.isServer) {
   // This code only runs on the server
-    // if (Bars.find().count === 0){
+    // if (Bars.find().count() === 0){
     //     const insertBars = [
     //         {
     //             barName: 'HMC',

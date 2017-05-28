@@ -15,7 +15,10 @@
 
     {{> nav}}
 
-        <div class="b4search" style="display: block">
+        {{#if showPreList}}
+            <div>
+                <button class="btn btn-primary requestBox" id="errMsg" style="display: none"></button>
+            </div>
             <div class="container-fluid">
                 <div class="row" id="b4SearchHeader">
                     <div class="col-md-12">
@@ -29,7 +32,7 @@
                 </div>
             </div>
             <div class="container-fluid" id="b4resultsTable">
-                    {{#each showList}}
+                    {{#each b4search}}
                 <div class="row" id="{{ID}}">
                     <div class="col-xs-12" id="resultRow">
                         <div class="col-xs-9 artistTab">
@@ -43,11 +46,10 @@
                 </div>
                     {{/each}}
             </div>
-        </div>
+        {{/if}}
 
 
-
-        <div class="afterSearch" style="display: none">
+        {{#if showSearchList}}
             <div>
                 <button class="btn btn-primary requestBox" id="errMsg" style="display: none"></button>
             </div>
@@ -80,5 +82,5 @@
                 </div>
                     {{/each}}
             </div>
-        </div>
+        {{/if}}
 </template>
