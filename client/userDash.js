@@ -42,8 +42,21 @@ Template.userDash.events({
 
         Meteor.call('findSong', Session.get('searchValue'), songs, function(err, result){
             Session.set('songList', result);
-            template.showPreList.set ( false );
-            template.showSearchList.set ( true );
+
+            if(result.length !== 0){
+                template.showPreList.set ( false );
+                template.showSearchList.set ( true );
+            }else{
+                $('#errMsg').show()
+                    .text(Session.get('searchValue') + " IS NOT IN SONGBOOK")
+                    .css("display", "block")
+                    .fadeIn(800)
+                    .delay(1500)
+                    .fadeOut(500);
+                template.showPreList.set ( true );
+                template.showSearchList.set ( false );
+
+            }
         });
         $('.inputField').val('');
     },
