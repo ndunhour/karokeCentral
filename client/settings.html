@@ -1,4 +1,13 @@
 <template name="settings">
+    <div class="container-fluid settings">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="input-group settingsPageHeader">
+                    <p>SETTINGS</p>
+                </div>
+          </div>
+        </div>
+    </div>
     {{> nav}}
     <div class="sessionId">
         <ul class="list-group" id="sessionIdBox">
@@ -10,7 +19,8 @@
         {{/each}}
         </ul>
     </div>
-    <div id="createBtn"><button type="button" class="btn btn-primary btn-sm"  id="createSessionId">CREATE SESSION ID</button></div>
+
+    <div id="createBtn"><button type="button" class="btn btn-sm" id="createSessionId">CREATE SESSION ID</button></div>
 
     <!-- save to add new bars
      <div id="createBarBtn"><button type="button" class="btn btn-primary btn-sm"  id="createBar">Create Bar</button></div> -->

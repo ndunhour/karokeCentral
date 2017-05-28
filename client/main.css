@@ -48,28 +48,6 @@ header {
 #login-buttons {
   display: block;
 }
-#createBtn{
-    text-align: center;
-    padding-bottom: 10px;
-}
-
-button#createSessionId.btn.btn-primary.btn-sm{
-    text-align: center;
-    outline: none;
-    text-shadow: #000 1px 1px;
-    color: #1f68bf;
-    background-color: #fe9593;
-    border: none;
-}
-
-button#createSessionId.btn.btn-primary.btn-sm:hover {
-    background-color: #fe9593
-}
-
-button#createSessionId.btn.btn-primary.btn-sm:active {
-  background-color: #fe9593;
-  transform: translateY(4px);
-}
 /***************************************/
 button.btn.btn-primary.yesLogout{
     outline: none;
@@ -102,9 +80,7 @@ button.btn.btn-primary.cancelLogout:active {
   background-color: #d43256;
   transform: translateY(4px);
 }
-#sessionIdBox{
-    border:1px solid #fe9593 !important;
-}
+
 
 h1 {
   font-size: 1.5em;
@@ -153,6 +129,40 @@ li:hover {
     text-align: center;
 }
 
+/************* SETTINGS TEMPLATE ************/
+.settings{
+    border: 1px solid #fe9593;
+    padding: 5px 10px;
+    background-color: #fe9593;
+}
+.settings p{
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 0;
+}
+#sessionIdBox{
+    border:1px solid #fe9593 !important;
+    color: #555;
+}
+#createBtn{
+    text-align: center;
+}
+button#createSessionId.btn.btn-sm{
+    background-color: #fe9593;
+    /*width: 100%;*/
+    color: white;
+    border: none !important;
+    box-shadow: 3px 3px #985958!important;
+}
+button#createSessionId.btn.btn-sm:focus{
+    border: none !important;
+    outline: none !important;
+}
+button#createSessionId.btn.btn-sm:active{
+    box-shadow: 1px 1px #fe9593!important;
+    transform: translateY(4px);
+}
 
 
 

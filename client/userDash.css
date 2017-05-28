@@ -35,7 +35,6 @@ span.glyphicon.glyphicon-search#searchGlyph{
 
 /******** list header **********/
 #searchHeader{
-    font-weight: bold;
     font-size: 1em;
     background-color: #58cee3;
     padding: 3px 3px !important;
@@ -54,7 +53,7 @@ p#songId{
 
 }
 
-/********** list ***************/
+/********** SEARCH LIST ***************/
 #resultRow{
     padding-right: 0 !important;
     padding-left: 0 !important;
@@ -63,8 +62,8 @@ p#songId{
 
 #id{
     margin-bottom: 0 !important;
-    padding-right: 0 !important;
     padding-left: 0 !important;
+    padding-right: 15px;
     text-align: right !important;
 }
 .idTab{
@@ -85,6 +84,16 @@ p#songId{
     padding-right: 0 !important;
     padding-left: 0 !important;
 }
+div#searchHeader.row > div.col-xs-12{
+    padding-right: 0 !important;
+    padding-left: 0 !important
+}
+div#searchHeader.row > div.col-xs-12 > div.col-xs-4{
+    text-align: right;
+}
+
+
+
 
 /******** request song notification ***************/
 button#errMsg.btn.btn-primary.requestBox{

@@ -15,7 +15,6 @@ div#deleteSong.col-xs-12{
     margin-bottom: 0;
 }
 #playListHeader{
-    font-weight: bold;
     font-size: 1em;
     background-color: #1f68bf;
     padding: 3px 3px !important;
@@ -26,13 +25,24 @@ div#deleteSong.col-xs-12{
 /********** list ***************/
 #playListRow{
     padding-right: 0 !important;
-    padding-left: 0 !important;
     border-bottom: 1px solid #1f68bf;
 }
 div.container-fluid.confirmModal{
     text-align: center;
-    border: 1px solid #78a4d8;
-    border-radius: 5px;
     padding: 10px;
     display: none;
+}
+div#playListHeader.row > div.col-xs-12{
+    padding-right: 0 !important;
+    padding-left: 0 !important
+}
+div#playListHeader.row > div.col-xs-12 > div.col-xs-4{
+    text-align: right;
+}
+
+.noGlyph{
+    font-size: x-large;
+}
+.yesGlyph{
+    font-size: x-large;
 }
