@@ -112,6 +112,7 @@ button#errMsg.btn.btn-primary.requestBox{
     margin: auto !important;
     box-shadow: 3px 3px #985958 !important;
     cursor: default;
+    white-space: normal;
 }
 button#errMsg.btn.btn-primary.requestBox:active{
     background-color: #fe9593;
