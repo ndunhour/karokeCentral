@@ -66,6 +66,9 @@ p#songId{
     padding-left: 0 !important;
     border-bottom: 1px solid #347b88;
 }
+#resultRow:hover{
+    cursor: pointer;
+}
 
 #id{
     margin-bottom: 0 !important;

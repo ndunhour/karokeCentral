@@ -1,5 +1,7 @@
 <template name="nav">
-        <div class="container-fluid userNav" style="display: none">
+
+        {{#if showUserDash}}
+        <div class="container-fluid userNav">
             <div class="row">
                 <div class="col-md-12">
                     <div class="col-xs-4 searchTab">
@@ -18,8 +20,10 @@
                 </div>
             </div>
         </div>
+        {{/if}}
 
-        <div class="container-fluid adminNav" style="display: none">
+        {{#if showAdminDash}}
+        <div class="container-fluid adminNav">
             <div class="row">
                 <div class="col-md-12">
                     <div class="col-xs-3 searchTab">
@@ -49,5 +53,5 @@
                 </div>
             </div>
         </div>
-
+        {{/if}}
 </template>
