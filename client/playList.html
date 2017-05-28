@@ -11,25 +11,30 @@
 
     {{> nav}}
 
-    <div class="confirm" style="display:none">
-        <table>
-            <tr>
-                <td><button type="button" class="btn btn-primary btn-sm cancelBtn">Cancel</button></td>
-                <td><p>Are you sure?</p></td>
-                <td><button type="button" class="btn btn-primary btn-sm confirmDelete">Yes</button></td>
-            </tr>
-
-        </table>
+    <div class="container-fluid confirmModal">
+        <div class="row confirm" >
+            <div class="col-xs-12">
+                <div class="col-xs-3">
+                    <button type="button" class="btn btn-primary btn-sm cancelBtn"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></button>
+                </div>
+                <div class="col-xs-6">
+                    <p>ARE YOU SURE?</p>
+                </div>
+                <div class="col-xs-3">
+                    <button type="button" class="btn btn-primary btn-sm confirmDelete"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="container-fluid">
         <div class="row" id="playListHeader">
             <div class="col-xs-12">
                 <div class="col-xs-9">
-                    <p id="song">Song</p>
+                    <p id="song">SONG</p>
                 </div>
                 <div class="col-xs-3">
-                    <p id="songId">SongId</p>
+                    <p id="songId">SONG ID</p>
                 </div>
             </div>
         </div>

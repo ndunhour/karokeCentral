@@ -4,12 +4,14 @@
                 <div class="col-md-12">
                     <div class="col-xs-4 searchTab">
                         <a href="{{user}}">
-                            <span class="glyphicon glyphicon-search searchGlyph" aria-hidden="true">
+                            <span class="glyphicon glyphicon-search searchGlyph" aria-hidden="true"></span>
                             <p>SONGBOOK</p>
-                            </span>
                         </a>
                     </div>
-                    <div class="col-xs-4 playListTab"><a href="/playList/{{playList}}"><span class="glyphicon glyphicon-list playListGlyph" aria-hidden="true"></span><p>PLAYLIST</p></a>
+                    <div class="col-xs-4 playListTab">
+                        <a href="/playList/{{playList}}">
+                            <span class="glyphicon glyphicon-list playListGlyph" aria-hidden="true"></span>
+                            <p>PLAYLIST</p></a>
                     </div>
                     <div class="col-xs-4 confirmLogout"><a href="#"><span class="glyphicon glyphicon-log-out logoutGlyph" aria-hidden="true"></span><p>LOGOUT</p></a>
                     </div>
@@ -20,15 +22,32 @@
         <div class="container-fluid adminNav" style="display: none">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="col-xs-3 searchTab"><a href="{{user}}"><span class="glyphicon glyphicon-search searchGlyph" aria-hidden="true"></span><p>SONGBOOK</p></a>
+                    <div class="col-xs-3 searchTab">
+                        <a href="{{user}}">
+                            <span class="glyphicon glyphicon-search searchGlyph" aria-hidden="true"></span>
+                            <p>SONGBOOK</p>
+                        </a>
                     </div>
-                    <div class="col-xs-3 playListTab"><a href="/playList/{{playList}}"><span class="glyphicon glyphicon-list playListGlyph" aria-hidden="true"></span><p>PLAYLIST</p></a>
+                    <div class="col-xs-3 playListTab">
+                        <a href="/playList/{{playList}}">
+                            <span class="glyphicon glyphicon-list playListGlyph" aria-hidden="true"></span>
+                            <p>PLAYLIST</p>
+                        </a>
                     </div>
-                    <div class="col-xs-3 settingsTab"><a href="/settings/{{settings}}"><span class="glyphicon glyphicon-cog settingsGlyph" aria-hidden="true"></span><p>SETTINGS</p></a>
+                    <div class="col-xs-3 settingsTab">
+                        <a href="/settings/{{settings}}">
+                            <span class="glyphicon glyphicon-cog settingsGlyph" aria-hidden="true"></span>
+                            <p>SETTINGS</p>
+                        </a>
                     </div>
-                    <div class="col-xs-3 confirmLogout"><a href="#"><span class="glyphicon glyphicon-log-out logoutGlyph" aria-hidden="true"></span><p>LOGOUT</p></a>
+                    <div class="col-xs-3 confirmLogout">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-log-out logoutGlyph" aria-hidden="true"></span>
+                            <p>LOGOUT</p>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+
 </template>

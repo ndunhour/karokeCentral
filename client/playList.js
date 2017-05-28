@@ -30,7 +30,7 @@ Template.playList.events({
         const deleteSong = e.currentTarget.children[1].children.id.textContent;
         Session.set('deleteSong', deleteSong);
         if(Meteor.users.find().count() > 0){
-            $('.confirm').css('display', 'block');
+            $('.confirmModal').css('display', 'block');
         }
     },
     'click .cancelBtn': function(e, t){
@@ -44,8 +44,7 @@ Template.playList.events({
             if(err){
                 console.log(err.reason);
             }
-            $('.confirm').css('display', 'none');
-            // $('.playlist').css('display', 'block');
+            $('.confirmModal').css('display', 'none');
         });
     }
 

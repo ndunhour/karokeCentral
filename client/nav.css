@@ -1,22 +1,31 @@
 .adminNav{
     text-align: center;
     margin-top: 15px;
+    font-size: xx-small;
 }
 .userNav{
     text-align: center;
     margin-top: 15px;
+    font-size: xx-small;
 }
 .searchGlyph{
     color: #1f68bf;
+    font-size: x-large;
 }
 .playListGlyph{
     color: #58cee3;
+    font-size: x-large;
+
 }
 .settingsGlyph{
     color: #fe9593;
+    font-size: x-large;
+
 }
 .logoutGlyph{
     color: #d43256;
+    font-size: x-large;
+
 }
 
 

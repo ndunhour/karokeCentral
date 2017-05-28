@@ -29,3 +29,10 @@ div#deleteSong.col-xs-12{
     padding-left: 0 !important;
     border-bottom: 1px solid #1f68bf;
 }
+div.container-fluid.confirmModal{
+    text-align: center;
+    border: 1px solid #78a4d8;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+}

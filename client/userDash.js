@@ -39,13 +39,13 @@ Template.userDash.events({
         });
         $('.inputField').val('');
     },
-    'click #row': function(e){
+    'click #resultRow': function(e){
+        e.preventDefault();
         const artist = e.currentTarget.children[0].children.artist.textContent;
         const title = e.currentTarget.children[0].children.title.textContent;
         const songId = e.currentTarget.parentElement.id;
 
         const owner = window.location.pathname.split('/').slice(2)[0];
-
         $('.requestBox')
             .text(title + " has been requested for you")
             .fadeIn(800)

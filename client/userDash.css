@@ -92,7 +92,7 @@ button#errMsg.btn.btn-primary.requestBox{
     padding-bottom: 6px;
     border: none !important;
     background-color: #fe9593;
-    width: 80%;
+    width: 100%;
     margin: auto !important;
     box-shadow: 3px 3px #985958 !important;
     cursor: default;
