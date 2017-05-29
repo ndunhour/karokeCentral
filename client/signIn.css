@@ -96,6 +96,10 @@ div#signInAdmin > button.btn:focus{
 /*********** ADMIN ********/
 form.adminSignIn{
     text-align: center;
+    margin-bottom: 5px;
+}
+form.adminSignIn div{
+    margin-bottom: 10px;
 }
 form.adminSignIn hr{
     margin-bottom: 10px !important;

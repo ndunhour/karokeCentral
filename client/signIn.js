@@ -61,7 +61,6 @@ Template.admin.events({
 
         Meteor.loginWithPassword(username, password, function(err){
             if(err){
-
                 $('#adminErrMsg').show()
                     .text(err.reason)
                     .fadeIn(800)
@@ -69,7 +68,7 @@ Template.admin.events({
                     .fadeOut(500);
                 $('#text').val('');
                 $('#pwd').val('');
-            } else {
+            } else{
                 Router.go("/adminDash/" + Meteor.userId());
             }
         });
