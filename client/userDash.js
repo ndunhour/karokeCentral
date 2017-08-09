@@ -6,7 +6,6 @@ import { ReactiveVar } from 'meteor/reactive-var';
 import './userDash.html';
 import './userDash.css';
 
-import { Songbook } from '../imports/api/songbook.js';
 
 Template.userDash.onCreated( function(){
     this.showPreList = new ReactiveVar ( true );
@@ -26,20 +25,18 @@ Template.userDash.helpers({
     },
     showList() {
         return Session.get('songList');
-    },
-    b4search() {
-        return Songbook.find({});
     }
 
 });
 
 Template.userDash.events({
-    'click .searchDB': function(event, template){
+    'click .searchDB': function(e, template){
         event.preventDefault();
-        const searchValue = $('.inputField').val().toUpperCase();
+        const searchValue = $('#searchBox').val().toString();
 
         Session.set('searchValue', searchValue);
 
+        // Code to be used with script on main.html page
         Meteor.call('findSong', Session.get('searchValue'), songs, function(err, result){
             Session.set('songList', result);
 
@@ -58,6 +55,7 @@ Template.userDash.events({
 
             }
         });
+
         $('.inputField').val('');
     },
     'click #resultRow': function(e){

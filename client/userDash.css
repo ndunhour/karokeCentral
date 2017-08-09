@@ -41,6 +41,9 @@ span.glyphicon.glyphicon-search#searchGlyph{
     color: #555;
     margin-top: 10px !important;
 }
+.welcome{
+    text-align: center;
+}
 /******** list header **********/
 #searchHeader{
     font-size: 1em;
@@ -70,7 +73,6 @@ p#songId{
 #resultRow:hover{
     cursor: pointer;
 }
-
 #id{
     margin-bottom: 0 !important;
     padding-left: 0 !important;
